@@ -5,7 +5,7 @@ import { PublicHeroShell } from "@/features/public-shell";
 import { VahiStyleTopInfoShell } from "@/components/business-pages/VahiStyleTopInfoShell";
 
 export const metadata: Metadata = {
-  title: "PitruMoksha Gaya Sacred Coordination | Connect Hub Co.",
+  title: "PitruMoksha Gaya Sacred Coordination | Holy Yatra",
   description:
     "Explore PitruMoksha Gaya ancestral ritual guidance, Verified Priest coordination, online and offline service pathways, and Vahi Records assistance.",
 };

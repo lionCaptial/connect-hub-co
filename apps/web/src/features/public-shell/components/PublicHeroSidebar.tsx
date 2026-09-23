@@ -3,17 +3,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import styles from '@/components/auth/PublicServicesSidebar.module.css';
+import { PUBLIC_BRAND } from '@/config/publicBrand';
+import { ROUTES } from '@/config/navigation';
 
 // SVG Icons matching the PNG Design Specification
-const HomeIcon = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M3 10 12 3l9 7" fill="none" stroke="#FFD76A" strokeWidth="2" strokeLinecap="round"/>
-    <path d="M5 9v11h14V9" fill="#C96D2D" stroke="#F4B942" strokeWidth="1.3"/>
-    <path d="M10 20v-6h4v6" fill="#6E351D"/>
-    <circle cx="12" cy="8" r="1.5" fill="#FFE49A"/>
-  </svg>
-);
-
 export const MulticolourAiBrainIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
     {/* luminous multicolour AI orbit */}
@@ -188,15 +181,19 @@ export function PublicHeroSidebar({
     if (!path) return '';
     const normPath = path.endsWith('/') && path.length > 1 ? path.slice(0, -1) : path;
 
-    if (normPath === '/') return 'home';
     if (normPath === '/zen-g') return 'zen-g';
     if (normPath === '/pitru-moksha-gaya' || normPath.startsWith('/pitru-moksha-gaya/')) return 'pitru-moksha-gaya';
     if (normPath === '/ritual-services' || normPath.startsWith('/ritual-services/')) return 'ritual-services';
+    if (
+      normPath === '/religious-partners/register' ||
+      normPath === '/travel-assistance/companion-register'
+    ) {
+      return 'work-with-us';
+    }
     if (normPath === '/travel-assistance' || normPath.startsWith('/travel-assistance/')) return 'travel-assistance';
     if (normPath === '/vahi-records' || normPath.startsWith('/vahi-records/')) return 'vahi-records';
     if (normPath === '/religious-partners' || normPath.startsWith('/religious-partners/')) return 'religious-partners';
     if (normPath === '/contact' || normPath.startsWith('/contact/')) return 'contact';
-    if (normPath === '/knowledge-center' || normPath.startsWith('/knowledge-center/')) return 'knowledge-center';
 
     return '';
   };
@@ -207,30 +204,20 @@ export function PublicHeroSidebar({
     <>
       {/* Navigation Items */}
       <div className={styles.navContainer}>
-        {/* Home */}
-        <Link href="/" className={`${styles.navItem} ${activeMainTab === 'home' ? styles.activeItem : ''}`}>
-          <span className={styles.navIcon}><HomeIcon /></span>
-          <span className={styles.navLabel}>Home</span>
-        </Link>
-
-        {/* Ask GenZ AI */}
-        <Link href="/zen-g" className={`${styles.navItem} ${activeMainTab === 'zen-g' ? styles.activeItem : ''}`}>
-          <span className={styles.navIcon}><MulticolourAiBrainIcon /></span>
-          <span className={styles.navLabel}>Ask GenZ AI</span>
-        </Link>
+        <h2 className={styles.sectionHeading}>OUR SERVICES</h2>
 
         {/* PitruMoksha Gaya */}
         <div className={styles.groupWrapper}>
-          <Link href="/pitru-moksha-gaya" className={`${styles.navItem} ${styles.mainLabelRow} ${activeMainTab === 'pitru-moksha-gaya' ? styles.activeItem : ''}`}>
+          <Link href={ROUTES.PITRU_MOKSHA_GAYA} className={`${styles.navItem} ${styles.mainLabelRow} ${activeMainTab === 'pitru-moksha-gaya' ? styles.activeItem : ''}`}>
             <span className={styles.navIcon}><DiyaIcon /></span>
             <span className={styles.navLabel}>PitruMoksha Gaya</span>
           </Link>
           <div className={`${styles.toggleRow} ${styles.subRow}`}>
-            <Link href="/pitru-moksha-gaya/online" className={`${styles.toggleTab} ${path === '/pitru-moksha-gaya/online' ? styles.toggleTabActive : ''}`}>
+            <Link href={ROUTES.PITRU_MOKSHA_GAYA_ONLINE} className={`${styles.toggleTab} ${path === ROUTES.PITRU_MOKSHA_GAYA_ONLINE ? styles.toggleTabActive : ''}`}>
               <GlobeIcon />
               <span>Virtual</span>
             </Link>
-            <Link href="/pitru-moksha-gaya/offline" className={`${styles.toggleTab} ${path === '/pitru-moksha-gaya/offline' ? styles.toggleTabActive : ''}`}>
+            <Link href={ROUTES.PITRU_MOKSHA_GAYA_OFFLINE} className={`${styles.toggleTab} ${path === ROUTES.PITRU_MOKSHA_GAYA_OFFLINE ? styles.toggleTabActive : ''}`}>
               <LocationIcon />
               <span>Offline</span>
             </Link>
@@ -239,52 +226,73 @@ export function PublicHeroSidebar({
 
         {/* Ritual Services */}
         <div className={styles.groupWrapper}>
-          <Link href="/ritual-services" className={`${styles.navItem} ${styles.mainLabelRow} ${activeMainTab === 'ritual-services' ? styles.activeItem : ''}`}>
+          <Link href={ROUTES.RITUAL_SERVICES} className={`${styles.navItem} ${styles.mainLabelRow} ${activeMainTab === 'ritual-services' ? styles.activeItem : ''}`}>
             <span className={styles.navIcon}><MandalaIcon /></span>
             <span className={styles.navLabel}>Ritual Services</span>
           </Link>
           <div className={`${styles.toggleRow} ${styles.subRow}`}>
-            <Link href="/ritual-services/online" className={`${styles.toggleTab} ${path === '/ritual-services/online' ? styles.toggleTabActive : ''}`}>
+            <Link href={ROUTES.RITUAL_SERVICES_ONLINE} className={`${styles.toggleTab} ${path === ROUTES.RITUAL_SERVICES_ONLINE ? styles.toggleTabActive : ''}`}>
               <GlobeIcon />
               <span>Virtual</span>
             </Link>
-            <Link href="/ritual-services/offline" className={`${styles.toggleTab} ${path === '/ritual-services/offline' ? styles.toggleTabActive : ''}`}>
+            <Link href={ROUTES.RITUAL_SERVICES_OFFLINE} className={`${styles.toggleTab} ${path === ROUTES.RITUAL_SERVICES_OFFLINE ? styles.toggleTabActive : ''}`}>
               <LocationIcon />
               <span>Offline</span>
             </Link>
           </div>
         </div>
 
-        {/* Travel Assistance */}
-        <Link href="/travel-assistance" className={`${styles.navItem} ${activeMainTab === 'travel-assistance' ? styles.activeItem : ''}`}>
+        {/* Personal Travel Assistance */}
+        <Link href={ROUTES.TRAVEL_ASSISTANCE} className={`${styles.navItem} ${activeMainTab === 'travel-assistance' ? styles.activeItem : ''}`}>
           <span className={styles.navIcon}><CompassIcon /></span>
-          <span className={styles.navLabel}>Travel Assistance</span>
+          <span className={styles.navLabel}>Personal Travel Assistance</span>
         </Link>
 
         {/* Vahi Records */}
-        <Link href="/vahi-records" className={`${styles.navItem} ${activeMainTab === 'vahi-records' ? styles.activeItem : ''}`}>
+        <Link href={ROUTES.VAHI_RECORDS} className={`${styles.navItem} ${activeMainTab === 'vahi-records' ? styles.activeItem : ''}`}>
           <span className={styles.navIcon}><ScrollQuillIcon /></span>
           <span className={styles.navLabel}>Vahi Records</span>
         </Link>
 
         <div className={styles.sidebarDivider} aria-hidden="true" />
+        <h2 className={styles.sectionHeading}>ASSIST &amp; CONNECT</h2>
 
-        {/* Religious Partner Registration */}
-        <Link href="/religious-partners" className={`${styles.navItem} ${activeMainTab === 'religious-partners' ? styles.activeItem : ''}`}>
-          <span className={styles.navIcon}><PartnerUserPlusIcon /></span>
-          <span className={styles.navLabel}>Priest Registration</span>
+        {/* Ask GenZ AI */}
+        <Link href={ROUTES.ASK_GENZ_AI} className={`${styles.navItem} ${activeMainTab === 'zen-g' ? styles.activeItem : ''}`}>
+          <span className={styles.navIcon}><MulticolourAiBrainIcon /></span>
+          <span className={styles.navLabel}>Ask GenZ AI</span>
         </Link>
 
-        {/* Mail / Raise Inquiry */}
-        <Link href="/contact?topic=inquiry" className={`${styles.navItem} ${activeMainTab === 'contact' ? styles.activeItem : ''}`}>
+        {/* Priest Network */}
+        <Link href={ROUTES.RELIGIOUS_PARTNERS} className={`${styles.navItem} ${activeMainTab === 'religious-partners' ? styles.activeItem : ''}`}>
+          <span className={styles.navIcon}><PartnerUserPlusIcon /></span>
+          <span className={styles.navLabel}>Priest Network</span>
+        </Link>
+
+        {/* Work With Us */}
+        <details className={styles.expandableGroup}>
+          <summary className={`${styles.navItem} ${styles.expandableSummary} ${activeMainTab === 'work-with-us' ? styles.activeItem : ''}`}>
+            <span className={styles.navIcon}><PartnerUserPlusIcon /></span>
+            <span className={styles.navLabel}>Work With Us</span>
+            <span className={styles.expandableChevron} aria-hidden="true">⌄</span>
+          </summary>
+          <div className={styles.expandableChildren}>
+            <Link href="/religious-partners/register" className={styles.childNavItem}>
+              Priest Registration
+            </Link>
+            <Link href={ROUTES.TRAVEL_COMPANION_REGISTER} className={styles.childNavItem}>
+              Travel Companion Reg.
+            </Link>
+            <Link href={`${ROUTES.INQUIRY}?topic=inquiry`} className={styles.childNavItem}>
+              Other Professional Opportunities
+            </Link>
+          </div>
+        </details>
+
+        {/* Raise Inquiry */}
+        <Link href={`${ROUTES.INQUIRY}?topic=inquiry`} className={`${styles.navItem} ${activeMainTab === 'contact' ? styles.activeItem : ''}`}>
           <span className={styles.navIcon}><QuestionCircleIcon /></span>
           <span className={styles.navLabel}>Raise Inquiry</span>
-        </Link>
-
-        {/* Knowledge Center */}
-        <Link href="/knowledge-center" className={`${styles.navItem} ${activeMainTab === 'knowledge-center' ? styles.activeItem : ''}`}>
-          <span className={styles.navIcon}><BookIcon /></span>
-          <span className={styles.navLabel}>Knowledge Center</span>
         </Link>
       </div>
 
@@ -298,9 +306,9 @@ export function PublicHeroSidebar({
         </div>
         <div className={`${styles.trustBadge} ${styles.trustBlock}`}>
           <ShieldIcon />
-          <span>Trusted. Private. Sacred.</span>
+          <span>{PUBLIC_BRAND.trustSidebarTitle}</span>
         </div>
-        <p className={styles.trustDescription}>We respect your faith and privacy.</p>
+        <p className={styles.trustDescription}>{PUBLIC_BRAND.trustSidebarBody}</p>
       </div>
     </>
   );
@@ -330,11 +338,11 @@ export function PublicHeroSidebar({
       <nav
         id="public-services-drawer"
         className={`${styles.sidebar} ${open ? styles.open : ''}`}
-        aria-label="Connect Hub Co services"
+        aria-label="Holy Yatra services"
         aria-hidden={!open}
       >
         <div className={styles.drawerHeading}>
-          <strong>Services</strong>
+          <strong>OUR SERVICES</strong>
           <button type="button" onClick={() => setOpen(false)} aria-label="Close services menu">
             ×
           </button>

@@ -8,6 +8,8 @@ node_modules/
 # Package manager lock files
 package-lock.json
 **/package-lock.json
+pnpm-lock.yaml
+**/pnpm-lock.yaml
 
 
 # ==========================================
@@ -91,3 +93,5 @@ graphify-out/
 .cursor/
 .next/
 docs/
+
+.pnpm-store/

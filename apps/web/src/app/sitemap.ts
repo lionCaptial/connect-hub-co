@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { ROUTES } from '@/config/navigation';
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://connecthubco.com';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://holyyatra.com';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date();

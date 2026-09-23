@@ -13,6 +13,8 @@ export function HomeHero() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [copyKey, setCopyKey] = useState(0);
   const touchStartX = useRef<number | null>(null);
 
   const slide = slides[index] ?? slides[0];
@@ -39,15 +41,34 @@ export function HomeHero() {
   }, []);
 
   useEffect(() => {
-    if (paused || reducedMotion || count < 2) return;
-    const id = window.setInterval(() => goNext(), AUTOPLAY_MS);
-    return () => window.clearInterval(id);
+    setCopyKey((k) => k + 1);
+    setProgress(0);
+  }, [index]);
+
+  useEffect(() => {
+    if (paused || reducedMotion || count < 2) {
+      if (reducedMotion) setProgress(1);
+      return;
+    }
+    const started = performance.now();
+    let frame = 0;
+    const tick = (now: number) => {
+      const t = Math.min(1, (now - started) / AUTOPLAY_MS);
+      setProgress(t);
+      if (t >= 1) {
+        goNext();
+        return;
+      }
+      frame = window.requestAnimationFrame(tick);
+    };
+    frame = window.requestAnimationFrame(tick);
+    return () => window.cancelAnimationFrame(frame);
   }, [paused, reducedMotion, count, index]);
 
   return (
     <section
       className={styles.hero}
-      aria-label="Connect Hub Co. service carousel"
+      aria-label="Holy Yatra service carousel"
       aria-roledescription="carousel"
       tabIndex={0}
       onMouseEnter={() => setPaused(true)}
@@ -101,12 +122,17 @@ export function HomeHero() {
       <div className={styles.heroOverlay} aria-hidden="true" />
 
       <div className={styles.heroInner} aria-live="polite">
-        <p className={styles.brand}>{brand}</p>
-        <h1 className={styles.headline}>{slide.headline}</h1>
-        <p className={styles.support}>{slide.support}</p>
-        <Link className={styles.cta} href={slide.cta.href}>
-          {slide.cta.label}
-        </Link>
+        <div key={copyKey} className={styles.heroCopyEnter}>
+          <p className={styles.brand}>{brand}</p>
+          <h1 className={styles.headline}>{slide.headline}</h1>
+          <p className={styles.support}>{slide.support}</p>
+          <Link className={styles.cta} href={slide.cta.href}>
+            <span>{slide.cta.label}</span>
+            <span className={styles.ctaArrow} aria-hidden="true">
+              →
+            </span>
+          </Link>
+        </div>
       </div>
 
       <div className={styles.heroControls}>
@@ -123,7 +149,14 @@ export function HomeHero() {
               aria-label={`Show ${item.headline}`}
               className={`${styles.heroDot} ${i === index ? styles.heroDotActive : ''}`}
               onClick={() => goTo(i)}
-            />
+            >
+              {i === index ? (
+                <span
+                  className={styles.heroProgress}
+                  style={{ ['--hero-progress' as string]: progress }}
+                />
+              ) : null}
+            </button>
           ))}
         </div>
         <button type="button" className={styles.heroArrow} aria-label="Next slide" onClick={goNext}>

@@ -1,0 +1,217 @@
+.shell {
+  width: min(var(--ch-content-max), calc(100% - 2rem));
+  margin: 1.2rem auto 2.4rem;
+  display: grid;
+  gap: 1rem;
+  color: var(--ch-ink);
+}
+
+.introBand {
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
+  background:
+    var(--ch-band-wash),
+    var(--ch-bg-elevated);
+  padding: 1rem;
+  display: grid;
+  gap: 0.8rem;
+  box-shadow: var(--ch-shadow-soft);
+}
+
+.introTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: start;
+}
+
+.welcome {
+  margin: 0;
+  color: var(--ch-ink);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+  font-weight: 650;
+}
+
+.meta {
+  margin: 0.28rem 0 0;
+  color: var(--ch-ink-muted);
+  font-size: 0.92rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.ghostLink,
+.signOutButton,
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0 0.95rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: filter 130ms var(--ch-ease), transform 130ms var(--ch-ease);
+}
+
+.ghostLink {
+  border: 1px solid var(--ch-hairline);
+  color: var(--ch-accent);
+  background: var(--ch-bg);
+}
+
+.signOutButton {
+  border: 0;
+  color: var(--ch-ink);
+  background: var(--ch-accent-soft);
+  cursor: pointer;
+}
+
+.ghostLink:hover,
+.signOutButton:hover,
+.navLink:hover {
+  filter: brightness(1.04);
+}
+
+.signOutButton:active,
+.navLink:active,
+.ghostLink:active {
+  transform: translateY(1px);
+}
+
+.signOutButton:disabled {
+  cursor: default;
+  opacity: 0.72;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.navLink {
+  border: 1px solid var(--ch-hairline);
+  color: var(--ch-accent);
+  background: var(--ch-bg);
+}
+
+.navLinkActive {
+  color: var(--ch-ink);
+  background: var(--ch-accent-soft);
+  border-color: transparent;
+}
+
+.contentCard {
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
+  background: var(--ch-bg-elevated);
+  padding: clamp(0.95rem, 2.4vw, 1.4rem);
+  box-shadow: var(--ch-shadow-soft);
+}
+
+.sectionTitle {
+  margin: 0;
+  color: var(--ch-ink);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+  font-weight: 650;
+}
+
+.sectionLead {
+  margin: 0.55rem 0 0;
+  color: var(--ch-ink-muted);
+  line-height: 1.55;
+}
+
+.ctaGroup {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.ctaLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.35rem;
+  padding: 0 1rem;
+  border-radius: 999px;
+  background: var(--ch-accent-soft);
+  color: var(--ch-ink);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.profileGrid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.profileRow {
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
+  padding: 0.7rem 0.8rem;
+  display: grid;
+  gap: 0.2rem;
+  background: var(--ch-bg);
+}
+
+.profileLabel {
+  color: var(--ch-ink-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.profileValue {
+  color: var(--ch-ink);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.note {
+  margin-top: 1rem;
+  color: var(--ch-ink-muted);
+  line-height: 1.45;
+}
+
+.note a {
+  color: var(--ch-accent);
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .shell {
+    width: calc(100% - 1rem);
+    margin-top: 0.9rem;
+  }
+
+  .introTop {
+    flex-direction: column;
+  }
+
+  .actions,
+  .nav {
+    width: 100%;
+  }
+
+  .ghostLink,
+  .signOutButton,
+  .navLink,
+  .ctaLink {
+    flex: 1 1 auto;
+    min-height: 2.75rem;
+  }
+}

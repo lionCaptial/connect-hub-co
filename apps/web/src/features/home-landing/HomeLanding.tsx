@@ -4,7 +4,7 @@ import { MotionConfig, motion } from 'motion/react';
 import styles from './HomeLanding.module.css';
 import { FinalEnquireSection } from './components/FinalEnquireSection';
 import { HomeHero } from './components/HomeHero';
-import { WhyUsSection } from './components/WhyUsSection';
+import { ServiceAssuranceSection } from './components/ServiceAssuranceSection';
 
 const fadeUp = {
   initial: false,
@@ -25,7 +25,7 @@ export function HomeLanding() {
           <HomeHero />
         </motion.div>
         <motion.div {...fadeUp}>
-          <WhyUsSection />
+          <ServiceAssuranceSection />
         </motion.div>
         <motion.div {...fadeUp}>
           <FinalEnquireSection />

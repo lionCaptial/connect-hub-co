@@ -1,14 +1,16 @@
 import { ROUTES } from '@/config/navigation';
+import { PUBLIC_BRAND } from '@/config/publicBrand';
 
 export const homeLandingContent = {
-  brand: 'Connect Hub Co.',
+  brand: PUBLIC_BRAND.name,
   slides: [
     {
       id: 'pitru-moksha-gaya',
-      headline: 'PitruMoksha Gaya',
-      support: 'Distance Never Stops Devotion — ancestral-ritual coordination for Gaya pathways.',
+      headline: 'When you can’t reach Gaya, devotion still can.',
+      support:
+        'Coordinate ancestral rites online or in person — with privacy, sanctity, and a path you can follow.',
       cta: {
-        label: 'Explore PitruMoksha Gaya',
+        label: 'Find your PitruMoksha path',
         href: ROUTES.PITRU_MOKSHA_GAYA,
       },
       image: {
@@ -18,10 +20,11 @@ export const homeLandingContent = {
     },
     {
       id: 'ritual-services',
-      headline: 'Ritual Services',
-      support: 'Broader ritual coordination with Verified Priests — online or in person.',
+      headline: 'Every rite deserves a priest you can trust.',
+      support:
+        'From sankalp to completion — verified priests, clear coordination, whether you’re here or far away.',
       cta: {
-        label: 'Explore Ritual Services',
+        label: 'See ritual pathways',
         href: ROUTES.RITUAL_SERVICES,
       },
       image: {
@@ -31,10 +34,11 @@ export const homeLandingContent = {
     },
     {
       id: 'travel-assistance',
-      headline: 'Travel Assistance',
-      support: 'Practical pilgrimage travel support across India and Nepal pathways.',
+      headline: 'The journey to the tirtha shouldn’t feel uncertain.',
+      support:
+        'Pilgrimage support across India and Nepal — practical help, respectful guidance, fewer unknowns.',
       cta: {
-        label: 'Explore Travel Assistance',
+        label: 'Plan sacred travel',
         href: ROUTES.TRAVEL_ASSISTANCE,
       },
       image: {
@@ -44,11 +48,11 @@ export const homeLandingContent = {
     },
     {
       id: 'vahi-records',
-      headline: 'Vahi Records',
+      headline: 'Your lineage is waiting to be found.',
       support:
-        'Guided ancestral lineage documentation and Vahi (Panji) assistance with authorised custodians.',
+        'Guided Gotra and Vahi (Panji) assistance with authorised custodians — careful, honest, never overpromised.',
       cta: {
-        label: 'Explore Vahi Records',
+        label: 'Begin lineage search',
         href: ROUTES.VAHI_RECORDS,
       },
       image: {
@@ -58,10 +62,11 @@ export const homeLandingContent = {
     },
     {
       id: 'verified-priest',
-      headline: 'Verified Priest',
-      support: 'Join the Verified Priest network — ritual authenticity led by qualified partners.',
+      headline: 'Faith needs partners who honour it.',
+      support:
+        'Join a network built on authenticity and accountability — so families find you with confidence.',
       cta: {
-        label: 'Explore Verified Priest',
+        label: 'Join as Verified Priest',
         href: ROUTES.RELIGIOUS_PARTNERS,
       },
       image: {
@@ -70,44 +75,79 @@ export const homeLandingContent = {
       },
     },
   ],
-  whyUs: {
-    eyebrow: '/ WHY US',
-    title: 'Duty, coordination, and clear authority',
-    support:
-      'Families need reverence and reliability. Here’s how Connect Hub Co. holds both.',
-    defaultOpenId: 'duty',
-    panels: [
+  assurance: {
+    eyebrow: PUBLIC_BRAND.assuranceHeading,
+    heading: 'Special Advantages',
+    body: 'Different journeys. The same devotion.',
+    items: [
       {
-        id: 'duty',
-        number: '01',
-        title: 'The duty',
-        body: 'Ancestral rites are an act of love and responsibility. We help families approach that duty with clarity, dignity, and dependable support.',
-        meanings: [
-          'Guidance that respects the emotional weight of the work',
-          'Clear next steps instead of guesswork',
-          'Support that stays human and dignified',
+        id: 'attend-your-way',
+        title: 'Attend Your Way',
+        accent: 'gold',
+        features: [
+          'Flexible Options',
+          'Choose What Suits You',
+          'No Need to Share Reasons',
         ],
       },
       {
-        id: 'coordination',
-        number: '02',
-        title: 'How we coordinate',
-        body: 'Structured guidance, scheduling, and end-to-end operational help. Ritual correctness stays with Verified Priests — we don’t replace religious authority.',
-        meanings: [
-          'Logistics and scheduling handled with care',
-          'End-to-end operational assistance',
-          'Ritual authority remains with qualified priests',
+        id: 'independent-verification',
+        title: 'Independent Verification',
+        accent: 'blue',
+        features: [
+          'Verify Arrangements',
+          'Check Authenticity',
+          'Greater Confidence',
         ],
       },
       {
-        id: 'priests-ai',
-        number: '03',
-        title: 'Verified Priests & responsible AI',
-        body: 'Human priests lead ritual authenticity. Zen G explains and guides options; it does not claim spiritual authority.',
-        meanings: [
-          'Priests own ritual correctness',
-          'Zen G helps navigate questions and choices',
-          'No AI spiritual authority claims',
+        id: 'virtual-services',
+        title: 'Virtual Services',
+        accent: 'green',
+        features: [
+          'Live Puja & Rituals',
+          'Chants & Jaap',
+          'Personalized Participation',
+        ],
+      },
+      {
+        id: 'shadow-traveller',
+        title: 'Shadow Traveller',
+        accent: 'purple',
+        features: [
+          'Local Assistance',
+          'On-Ground Presence',
+          'Support For Families',
+        ],
+      },
+      {
+        id: 'partner-opportunities',
+        title: 'Partner Opportunities',
+        accent: 'orange',
+        features: [
+          'Income Opportunities',
+          'Value-Added Services',
+          'Be Part of a Trusted Network',
+        ],
+      },
+      {
+        id: 'confidential-service',
+        title: 'Confidential Service',
+        accent: 'teal',
+        features: [
+          'Discreet Handling',
+          'Dignity and Comfort',
+          'Only Essential Information',
+        ],
+      },
+      {
+        id: 'beyond-standard',
+        title: 'Beyond the Standard Service',
+        accent: 'magenta',
+        features: [
+          'Custom Arrangements',
+          'Additional Rituals or Add-ons',
+          'Solutions for Unique Situations',
         ],
       },
     ],

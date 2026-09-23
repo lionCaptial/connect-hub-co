@@ -19,14 +19,14 @@
 | `backend/prisma/schema.prisma` | User, Customer, ReligiousPartner, PitruMokshaRequest | FOUND — CANONICAL but narrower than web model |
 | `stash@{0}^3` / commit `49106b40` | Untracked Aug-5 source, docs, assets, Vahi material | FOUND — STASH |
 | commit `f51d9e8b` | Shared-shell consolidation and 206-file architecture | FOUND — GIT HISTORY |
-| `connect-hub-co-recovery-review/stash-49106b-source` | Extracted Aug-5 source | FOUND — HISTORICAL |
+| `holy-yatra-recovery-review/stash-49106b-source` | Extracted Aug-5 source | FOUND — HISTORICAL |
 | `KHEM_MASTER_VAULT` | Repeated thematic extracts for shell, Heroes, pages, AI, knowledge, schemas | FOUND — VAULT; timestamps do not prove approval |
 | dated public-shell/pitru backups | Aug-3/Aug-4 visual and content snapshots | FOUND — BACKUP |
 | `SITARAM_HERO1_MASTER_LOCK_v1.1.md` in stash package | Hero 1 lock and integration guidance | FOUND — LOCKED reference |
 | `SITARAM_HERO_2_RITUAL_SERVICES_v1.1_FINAL_LOCK.md` in stash docs | Ritual Hero lock | FOUND — LOCKED reference |
 | Vahi approved-content DOCX files in stash | Vahi website/cards/consolidation content | FOUND — APPROVED-CONTENT evidence; binary review limited |
 | `master-vault/ARCHITECTURE.md` | Standalone secrets microservice | FOUND — HISTORICAL; relationship conflict |
-| `connect-hub-co - Copy` | Only an AutoRecovery editor file | NO USEFUL PROJECT SOURCE FOUND |
+| `holy-yatra - Copy` | Only an AutoRecovery editor file | NO USEFUL PROJECT SOURCE FOUND |
 
 ## Recovery provenance records
 

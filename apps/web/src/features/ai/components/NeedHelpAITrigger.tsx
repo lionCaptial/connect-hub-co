@@ -82,7 +82,7 @@ export function NeedHelpAITrigger() {
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[#064E59] px-5 py-3 text-sm font-semibold text-white shadow-xl hover:bg-[#087F8C] focus:outline-none focus:ring-2 focus:ring-[#D4AF37]"
+        className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-full bg-[var(--ch-accent)] px-5 py-3 text-sm font-semibold text-white shadow-xl hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-[var(--ch-accent-soft)]"
         aria-expanded={isOpen}
         aria-controls="compact-ai-modal"
       >

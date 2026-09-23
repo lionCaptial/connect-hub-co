@@ -116,7 +116,7 @@ const benefits: readonly RpnBenefit[] = [
   },
   {
     title: 'Administrative Support',
-    description: 'Focus entirely on performing sacred rites while Connect Hub Co. handles scheduling, logistics, and client support.',
+    description: 'Focus entirely on performing sacred rites while Holy Yatra handles scheduling, logistics, and client support.',
     icon: 'consultation',
   },
   {
@@ -413,7 +413,7 @@ const faqs = [
   },
   {
     question: 'Is income or booking volume guaranteed?',
-    answer: 'No. Connect Hub Co. does not promise guaranteed bookings, fixed income, commissions, or automatic customer assignments. Inquiries depend on customer demand and suitability.',
+    answer: 'No. Holy Yatra does not promise guaranteed bookings, fixed income, commissions, or automatic customer assignments. Inquiries depend on customer demand and suitability.',
   },
   {
     question: 'How are prices and inclusions handled?',
@@ -438,7 +438,7 @@ export function ReligiousPartnersContent() {
     <div className={`${styles.rpnContent} business-inner-page`}>
       <section className={styles.masterStrip} aria-labelledby="partner-master-title">
         <div>
-          <p>CONNECT HUB CO.</p>
+          <p>HOLY YATRA</p>
           <h1 id="partner-master-title">Serve With Tradition. Grow With Trust.</h1>
         </div>
         <div className={styles.masterEntries}>
@@ -469,7 +469,7 @@ export function ReligiousPartnersContent() {
             <div className={styles.sectionItem}>
               <h3>Role in Ritual Delivery</h3>
               <p>
-                Verified Priests conduct authentic Vaidik rites for seeking families while Connect Hub Co. manages scheduling, client communication, travel logistics, and administrative support.
+                Verified Priests conduct authentic Vaidik rites for seeking families while Holy Yatra manages scheduling, client communication, travel logistics, and administrative support.
               </p>
             </div>
             <div className={styles.sectionItem}>
@@ -749,7 +749,7 @@ export function ReligiousPartnersContent() {
         <div>
           <p>SECTION 12 — REGISTRATION APPLICATION</p>
           <h2 id="why-choose-connect-hub">
-            <span>Why Join Connect Hub Co.?</span>
+            <span>Why Join Holy Yatra?</span>
           </h2>
           <span>
             Submit your profile, service expertise, locations, and availability for administrative review and verification.

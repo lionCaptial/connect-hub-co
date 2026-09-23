@@ -5,14 +5,14 @@ import { submitPitruMokshaRequest } from "@/services/pitru-moksha.api";
 import { PitruMokshaInput } from "@/types/pitru-moksha";
 
 const initial: PitruMokshaInput = { name: "", email: "", phone: "", country: "India", city: "", isNRI: false, packageCode: "COMPLETE", preferredDate: "", preferredDateEnd: "", pilgrimCount: 1, pilgrimNames: "", ancestorNames: "", gotra: "", relationToAncestors: "", contactPreference: "WHATSAPP", travelSupport: false, accommodationSupport: false, arrivalDetails: "", specialRequirements: "" };
-const field = "mt-1 w-full rounded-xl border border-amber-200 bg-white p-3 text-stone-900 outline-none focus:border-orange-600";
+const field = "mt-1 w-full rounded-xl border border-[color:var(--ch-hairline)] bg-[var(--ch-bg-elevated)] p-3 text-[var(--ch-ink)] outline-none focus:border-[var(--ch-accent)]";
 
 export function EnquiryForm() {
   const router = useRouter(); const [form, setForm] = useState(initial); const [error, setError] = useState<string | null>(null); const [saving, setSaving] = useState(false);
   function change(event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) { const target = event.target; setForm((value) => ({ ...value, [target.name]: target instanceof HTMLInputElement && target.type === "checkbox" ? target.checked : target.name === "pilgrimCount" ? Number(target.value) : target.value })); }
   async function submit(event: FormEvent) { event.preventDefault(); setError(null); setSaving(true); try { const result = await submitPitruMokshaRequest({ ...form, preferredDate: `${form.preferredDate}T09:00:00.000Z`, preferredDateEnd: form.preferredDateEnd ? `${form.preferredDateEnd}T09:00:00.000Z` : "" }); router.push(`/pitru-moksha/success?request=${encodeURIComponent(result.requestId)}`); } catch (reason) { setError(reason instanceof Error ? reason.message : "We could not submit your request. Please try again."); } finally { setSaving(false); } }
-  return <form id="enquiry" onSubmit={submit} className="mx-auto max-w-4xl rounded-3xl bg-amber-50 p-5 shadow-xl sm:p-10">
-    <h2 className="text-3xl font-bold text-stone-900">Plan your Gaya seva</h2><p className="mt-2 text-stone-600">Share the details our pilgrimage coordinator needs. Your information is kept private.</p>
+  return <form id="enquiry" onSubmit={submit} className="mx-auto max-w-4xl rounded-[var(--ch-radius)] border border-[color:var(--ch-hairline)] bg-[var(--ch-bg-elevated)] p-5 shadow-[var(--ch-shadow-soft)] sm:p-10">
+    <h2 className="font-serif text-3xl font-bold text-[var(--ch-ink)]">Plan your Gaya seva</h2><p className="mt-2 text-[var(--ch-ink-muted)]">Share the details our pilgrimage coordinator needs. Your information is kept private.</p>
     {error ? <p className="mt-5 rounded-lg bg-red-50 p-3 text-red-700" role="alert">{error}</p> : null}
     <div className="mt-7 grid gap-5 sm:grid-cols-2">
       <label>Full name *<input className={field} name="name" value={form.name} onChange={change} maxLength={120} required /></label><label>Phone / WhatsApp *<input className={field} name="phone" value={form.phone} onChange={change} maxLength={40} required /></label>
@@ -25,6 +25,6 @@ export function EnquiryForm() {
       <label className="sm:col-span-2">Names of travelling pilgrims<textarea className={field} name="pilgrimNames" value={form.pilgrimNames} onChange={change} rows={2} /></label>
       <label className="flex items-center gap-2"><input type="checkbox" name="travelSupport" checked={form.travelSupport} onChange={change} /> Need arrival / local travel support</label><label className="flex items-center gap-2"><input type="checkbox" name="accommodationSupport" checked={form.accommodationSupport} onChange={change} /> Need accommodation guidance</label>
       <label className="sm:col-span-2">Arrival or travel details<textarea className={field} name="arrivalDetails" value={form.arrivalDetails} onChange={change} rows={2} /></label><label className="sm:col-span-2">Special requirements<textarea className={field} name="specialRequirements" value={form.specialRequirements} onChange={change} rows={3} /></label>
-    </div><button className="mt-7 w-full rounded-xl bg-orange-700 px-6 py-4 font-semibold text-white disabled:opacity-60" disabled={saving}>{saving ? "Submitting securely..." : "Request a consultation"}</button>
+    </div><button className="mt-7 w-full rounded-full bg-[var(--ch-accent-soft)] px-6 py-4 font-semibold text-[var(--ch-ink)] disabled:opacity-60" disabled={saving}>{saving ? "Submitting securely..." : "Request a consultation"}</button>
   </form>;
 }

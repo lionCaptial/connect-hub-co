@@ -50,7 +50,7 @@ const initialMockUniversalRecords: URMSUniversalRecord[] = [
         newStage: 'Request Submission',
         changedBy: 'Customer',
         changeSource: 'CUSTOMER',
-        publicNote: 'Request submitted on Connect Hub Co. platform.',
+        publicNote: 'Request submitted on Holy Yatra platform.',
         timestamp: '2026-07-24T09:00:00Z',
       },
       {
@@ -386,7 +386,7 @@ export async function createUniversalRequest(input: {
       {
         id: `c_${Date.now()}`,
         referenceId: refId,
-        sender: 'Connect Hub Co. System',
+        sender: 'Holy Yatra System',
         visibility: 'CUSTOMER_VISIBLE',
         channel: 'SYSTEM_NOTIFICATION',
         message: `Universal Reference ID ${refId} created and routed to ${team}.`,

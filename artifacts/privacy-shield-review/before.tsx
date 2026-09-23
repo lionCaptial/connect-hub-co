@@ -119,7 +119,7 @@ function NeonOrbits() {
 
 export function OnlineAncestralPage() {
   return (
-    <BusinessPageFrame breadcrumb={[{ label: 'Connect Hub Co.', href: '/' }, { label: 'PitruMoksha Gaya', href: PITRU_MOKSHA_GAYA_ROUTE }, { label: 'Online' }]} className={styles.onlinePage} showBreadcrumb={false} showSidebar={false}>
+    <BusinessPageFrame breadcrumb={[{ label: 'Holy Yatra', href: '/' }, { label: 'PitruMoksha Gaya', href: PITRU_MOKSHA_GAYA_ROUTE }, { label: 'Online' }]} className={styles.onlinePage} showBreadcrumb={false} showSidebar={false}>
       <section className={`${styles.hero} ${styles.introStrip}`} aria-labelledby="online-page-title">
         <h1 id="online-page-title">Distance Never Stops Devotion.</h1>
       </section>

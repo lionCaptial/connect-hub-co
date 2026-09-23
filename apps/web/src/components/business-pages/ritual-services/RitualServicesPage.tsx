@@ -199,7 +199,7 @@ export function RitualServicesPage({ embedded = false }: { embedded?: boolean })
   return (
     <BusinessPageFrame
       breadcrumb={[
-        { label: 'Connect Hub Co.', href: '/' },
+        { label: 'Holy Yatra', href: '/' },
         { label: 'Ritual Services' },
       ]}
       className={styles.ritualPage}

@@ -128,7 +128,7 @@ export async function dispatchQuoteViaEmail(quote: ServiceQuote): Promise<boolea
 
   const htmlBody = `
     <div style="font-family: serif; max-width: 650px; margin: 0 auto; border: 1px solid #087F8C; padding: 24px; border-radius: 16px; background-color: #ffffff;">
-      <h2 style="color: #087F8C; border-bottom: 2px solid #D4AF37; padding-bottom: 8px;">Connect Hub Co. - Official Vaidik Service Proposal</h2>
+      <h2 style="color: #087F8C; border-bottom: 2px solid #D4AF37; padding-bottom: 8px;">Holy Yatra - Official Vaidik Service Proposal</h2>
       <p>Dear <strong>${quote.customerName}</strong>,</p>
       <p>Pranam. Please find enclosed your approved service proposal for <strong>${priestTerminology(quote.serviceName)}</strong> (Category: ${quote.category.toUpperCase()}).</p>
       
@@ -173,7 +173,7 @@ export async function dispatchQuoteViaEmail(quote: ServiceQuote): Promise<boolea
   await sendEmailNotification({
     toEmail: quote.customerEmail,
     recipientName: quote.customerName,
-    subject: `Approved Service Proposal #${quote.quoteNumber} - Connect Hub Co.`,
+    subject: `Approved Service Proposal #${quote.quoteNumber} - Holy Yatra`,
     type: 'QUOTE_DELIVERY',
     htmlBody,
     referenceId: quote.id,
@@ -188,7 +188,7 @@ export async function dispatchQuoteViaWhatsApp(quote: ServiceQuote): Promise<str
     throw new Error('Administrator approval is required before dispatching quotes.');
   }
 
-  const messageText = `*Connect Hub Co. - Approved Service Proposal #${quote.quoteNumber}*
+  const messageText = `*Holy Yatra - Approved Service Proposal #${quote.quoteNumber}*
 
 Pranam ${quote.customerName} Ji,
 
@@ -205,7 +205,7 @@ ${quote.items.map((i) => `• ${priestTerminology(i.description)} (x${i.quantity
 
 Reply to this message to accept or confirm ceremony dates.
 
-_Connect Hub Co. Pilgrimage Coordination Desk_`;
+_Holy Yatra Pilgrimage Coordination Desk_`;
 
   const result = await sendWhatsAppNotification({
     phone: quote.customerPhone,
@@ -243,7 +243,7 @@ export function generateQuotePDFHTML(quote: ServiceQuote): string {
       </head>
       <body>
         <div class="header">
-          <div class="title">CONNECT HUB CO.</div>
+          <div class="title">HOLY YATRA</div>
           <div class="subtitle">Religious Service & Sacred Travel Assistance</div>
           <div class="status-badge">STATUS: ${quote.status} (VERSION v${quote.version})</div>
         </div>
@@ -297,7 +297,7 @@ export function generateQuotePDFHTML(quote: ServiceQuote): string {
           <strong>TERMS & CONDITIONS:</strong> ${priestTerminology(quote.termsAndConditions)}
         </div>
         <div class="footer">
-          Official Vaidik Service Proposal issued by Connect Hub Co. Operations Desk.<br/>
+          Official Vaidik Service Proposal issued by Holy Yatra Operations Desk.<br/>
           Gaya Ji · Kashi · Patna · New Delhi
         </div>
       </body>

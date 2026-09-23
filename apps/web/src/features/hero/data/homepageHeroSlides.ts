@@ -11,11 +11,11 @@ export const homepageHeroSlides = [
     index: 1,
     route: PITRU_MOKSHA_GAYA_ROUTE,
     title: 'PitruMoksha Gaya',
-    brand: 'Connect Hub Co.',
+    brand: 'Holy Yatra',
     philosophy: 'Explore the Land of Moksha',
     promise: 'Distance Never Stops Devotion',
     body:
-      'PitruMoksha Gaya is a specialized ancestral-ritual coordination service platform powered by Connect Hub Co.',
+      'PitruMoksha Gaya is a specialized ancestral-ritual coordination service platform powered by Holy Yatra',
     bullets: [
       'Online Services — Remote participation, Live Sankalp, or approved representative-led coordination.',
       'Offline Services — In-person participation at Gaya Ji with local ritual coordination.',
@@ -95,7 +95,7 @@ export const homepageHeroSlides = [
     index: 4,
     route: VAHI_RECORDS_ROUTE,
     title: 'Vahi Records',
-    brand: 'Connect Hub Co.',
+    brand: 'Holy Yatra',
     philosophy: 'Unearth Your Ancestral Lineage',
     promise: null,
     body:

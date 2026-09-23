@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { BusinessPageIcon, type BusinessPageIconName } from '../BusinessPageIcon';
 import { BusinessStep } from '../BusinessPageShell';
 import { PITRU_MOKSHA_GAYA_ROUTE, VAHI_RECORDS_ROUTE } from '@/features/hero/data/heroRoutes';
+import { ROUTES } from '@/config/navigation';
 import styles from './TravelAssistancePage.module.css';
 
 const inquiryHref = '/contact?topic=travel-assistance';
@@ -167,7 +168,7 @@ export function TravelAssistanceContent() {
           <p>DEDICATED JOURNEY MANAGEMENT</p>
           <h2 id="travel-confidence-title">Travel with Confidence. Return with Peace of Mind.</h2>
           <span>
-            Connect Hub Co. is not a traditional travel agency or tour operator selling packaged itineraries. At Connect Hub Co., we believe every traveler deserves more than just transportation and accommodation—they deserve confidence, reliable guidance, and a trusted helping hand throughout their journey. Through our verified network of partners and dedicated local coordinators, we help travelers navigate unfamiliar destinations across India and Nepal with ease, without compromising their independence.
+            Holy Yatra is not a traditional travel agency or tour operator selling packaged itineraries. At Holy Yatra, we believe every traveler deserves more than just transportation and accommodation—they deserve confidence, reliable guidance, and a trusted helping hand throughout their journey. Through our verified network of partners and dedicated local coordinators, we help travelers navigate unfamiliar destinations across India and Nepal with ease, without compromising their independence.
           </span>
         </header>
       </section>
@@ -178,7 +179,7 @@ export function TravelAssistanceContent() {
           <p>SERVICE BOUNDARIES & STANDARDS</p>
           <h2 id="travel-framework-title">Critical Engagement Framework & Boundaries</h2>
           <span>
-            Connect Hub Co. operates under strict operational boundaries, transparent service terms, and verified background screening.
+            Holy Yatra operates under strict operational boundaries, transparent service terms, and verified background screening.
           </span>
         </header>
         <ul className={styles.frameworkList}>
@@ -200,7 +201,7 @@ export function TravelAssistanceContent() {
             <BusinessPageIcon name="check" />
             <div>
               <strong>Employment Status:</strong>
-              <p>Connect Hub Co. operates as an independent service provider. The assigned assistant is not an employee of the customer.</p>
+              <p>Holy Yatra operates as an independent service provider. The assigned assistant is not an employee of the customer.</p>
             </div>
           </li>
         </ul>
@@ -210,15 +211,15 @@ export function TravelAssistanceContent() {
       <section className={styles.section} aria-labelledby="why-choose-title">
         <header>
           <p>DEDICATED SUPPORT</p>
-          <h2 id="why-choose-title">Why Choose Connect Hub Co.?</h2>
+          <h2 id="why-choose-title">Why Choose Holy Yatra?</h2>
           <span>
-            Modern travel is highly accessible, yet unforeseen challenges such as missed connections, unfamiliar local regulations, language barriers, and sudden medical emergencies can disrupt a well-planned journey. Connect Hub Co. bridges this gap. Customers continue to book their preferred airlines, hotels, and tour operators, while our trained coordinators provide background management and ground assistance. Whether the customer is a newly married couple, senior citizen, NRI family visiting India, family traveler, or solo traveler, the framework ensures physical support is available when required. We act as Your Shadow Traveler—always nearby when needed and never intrusive when not required.
+            Modern travel is highly accessible, yet unforeseen challenges such as missed connections, unfamiliar local regulations, language barriers, and sudden medical emergencies can disrupt a well-planned journey. Holy Yatra bridges this gap. Customers continue to book their preferred airlines, hotels, and tour operators, while our trained coordinators provide background management and ground assistance. Whether the customer is a newly married couple, senior citizen, NRI family visiting India, family traveler, or solo traveler, the framework ensures physical support is available when required. We act as Your Shadow Traveler—always nearby when needed and never intrusive when not required.
           </span>
         </header>
         <div className={styles.importantNote}>
           <strong>Important Note:</strong>
           <p>
-            Connect Hub Co. is not a traditional travel agency or tour operator selling packaged itineraries. We provide 247 journey management, Shadow Traveler assistance, local ground coordination, and emergency traveler support across major destinations in India and Nepal.
+            Holy Yatra is not a traditional travel agency or tour operator selling packaged itineraries. We provide 247 journey management, Shadow Traveler assistance, local ground coordination, and emergency traveler support across major destinations in India and Nepal.
           </p>
         </div>
       </section>
@@ -306,7 +307,7 @@ export function TravelAssistanceContent() {
           <p>OUR CORE VALUES</p>
           <h2 id="core-commitments-title">Our Core Commitments</h2>
           <span>
-            At Connect Hub Co., every journey is backed by structured coordination, strict standards, and transparent accountability.
+            At Holy Yatra, every journey is backed by structured coordination, strict standards, and transparent accountability.
           </span>
         </header>
         <ul className={styles.frameworkList}>
@@ -446,6 +447,21 @@ export function TravelAssistanceContent() {
               <p>{faq.answer}</p>
             </details>
           ))}
+        </div>
+      </section>
+
+      {/* Travel Companion CTAs */}
+      <section className={styles.inquiry} id="travel-companion" aria-labelledby="travel-companion-title">
+        <div>
+          <p>WORK WITH US</p>
+          <h2 id="travel-companion-title">Join as a Travel Companion</h2>
+          <span>
+            Support pilgrims and travelers on the ground. Register your interest — no payment is required to apply.
+          </span>
+        </div>
+        <div className={styles.inquiryActions}>
+          <Link href={ROUTES.TRAVEL_COMPANION_REGISTER}>Join as Travel Companion</Link>
+          <Link href={ROUTES.TRAVEL_COMPANION_REGISTER}>Travel Companion Registration</Link>
         </div>
       </section>
 

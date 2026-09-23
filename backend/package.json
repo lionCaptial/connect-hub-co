@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "Connect Hub Co Backend",
+  "description": "Holy Yatra Backend",
   "main": "src/server.ts",
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts"

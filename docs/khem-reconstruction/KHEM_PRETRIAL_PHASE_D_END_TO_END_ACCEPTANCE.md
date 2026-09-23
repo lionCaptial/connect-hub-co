@@ -15,7 +15,7 @@ End-to-end pre-trial acceptance remains **PARTIAL**. The surviving Express/Prism
 
 | Check | Evidence | Result |
 |---|---|---|
-| Port 5000 | `GET http://localhost:5000/` returned 200 and “Connect Hub Co Backend Running” | PASS |
+| Port 5000 | `GET http://localhost:5000/` returned 200 and “Holy Yatra Backend Running” | PASS |
 | Auth health | `GET /api/auth/health` returned 200 | PASS |
 | Login transport | safe invalid probe returned 401 rather than refusal/timeout | PASS |
 | Login path | frontend and backend both use `/api/auth/login` | PASS |

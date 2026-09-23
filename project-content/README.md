@@ -1,4 +1,4 @@
-# Connect Hub Co. master content library
+# Holy Yatra master content library
 
 This directory is the copy-first master library for approved public static content and physical assets.
 

@@ -4,7 +4,7 @@ import { VahiStyleTopInfoShell } from '@/components/business-pages/VahiStyleTopI
 import { PublicHeroShell } from '@/features/public-shell';
 
 export const metadata: Metadata = {
-  title: 'Vedic Ritual Services & Sacred Coordination | Connect Hub Co.',
+  title: 'Vedic Ritual Services & Sacred Coordination | Holy Yatra',
   description:
     'Explore authentic Vedic pujas, homams, Griha Pravesh, Navagraha Shanti, sacred samagri care, and NRI remote live Sankalp coordinated through Verified Priests across 15+ locations in India and Nepal.',
 };

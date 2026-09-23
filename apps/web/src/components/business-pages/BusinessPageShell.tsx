@@ -17,7 +17,7 @@ export type BusinessPageShellProps = {
   relatedLinks: readonly BusinessRelatedLink[]; inquiryHref: string; embedded?: boolean;
 };
 
-export function BusinessPageFrame({ breadcrumb, children, className = '', embedded = false, showBreadcrumb = true, showSidebar = false }: { breadcrumb: BusinessPageShellProps['breadcrumb']; children: React.ReactNode; className?: string; embedded?: boolean; showBreadcrumb?: boolean; showSidebar?: boolean }) {
+export function BusinessPageFrame({ breadcrumb, children, className = '', embedded = false, showBreadcrumb = true }: { breadcrumb: BusinessPageShellProps['breadcrumb']; children: React.ReactNode; className?: string; embedded?: boolean; showBreadcrumb?: boolean; /** @deprecated Ignored — public nav is header Our Services only. */ showSidebar?: boolean }) {
   const content = (
       <main className={`${styles.page} business-inner-page ${className}`}>
         {showBreadcrumb ? <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
@@ -33,7 +33,7 @@ export function BusinessPageFrame({ breadcrumb, children, className = '', embedd
         {children}
       </main>
   );
-  return embedded ? content : <PublicHeroShell showSidebar={showSidebar} fullWidth={!showSidebar}>{content}</PublicHeroShell>;
+  return embedded ? content : <PublicHeroShell fullWidth>{content}</PublicHeroShell>;
 }
 
 export function BusinessPageShell(props: BusinessPageShellProps) {

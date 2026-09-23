@@ -17,7 +17,7 @@ export class CommercialWorkflowError extends Error {
 const CUSTOMER_RESPONSIBILITIES = [
   "Provide accurate customer, participant, service, and scheduling information.",
   "Follow agreed preparation, conduct, and external payment instructions.",
-  "Notify Connect Hub Co. promptly of material changes or cancellation requests.",
+  "Notify Holy Yatra promptly of material changes or cancellation requests.",
 ];
 const CONNECT_HUB_RESPONSIBILITIES = [
   "Coordinate the agreed service scope with the assigned service team or partner.",

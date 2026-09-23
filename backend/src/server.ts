@@ -33,7 +33,7 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.json({
     success: true,
-    message: "Connect Hub Co Backend Running",
+    message: "Holy Yatra Backend Running",
   });
 });
 

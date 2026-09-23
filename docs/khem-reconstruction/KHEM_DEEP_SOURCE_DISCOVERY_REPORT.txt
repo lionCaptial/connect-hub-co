@@ -11,9 +11,9 @@ Only Phase 6 has an explicit content label: “Phase 6 — Ask GenZ AI + Knowled
 2. SEARCH COVERAGE
 
 Roots:
-- C:\Projects\connect-hub-co — 5,873 non-build/dependency files observed; 4,215 eligible by requested extension.
-- C:\Projects\connect-hub-co - Copy — one Office AutoRecovery file; no eligible project source.
-- C:\Projects\connect-hub-co-recovery-review — 218 files; 177 eligible.
+- C:\Projects\holy-yatra — 5,873 non-build/dependency files observed; 4,215 eligible by requested extension.
+- C:\Projects\holy-yatra - Copy — one Office AutoRecovery file; no eligible project source.
+- C:\Projects\holy-yatra-recovery-review — 218 files; 177 eligible.
 - C:\Projects\KHEM_MASTER_VAULT — 365 files; 310 eligible.
 - C:\Projects\master-vault — 15 files; 14 eligible.
 
@@ -22,7 +22,7 @@ Searches covered exact and expanded core-document terms, Phase/Round 1–24, SHY
 3. STRONGEST MATCHES
 
 TERM: KHEM / Source of Truth / Founder Approval / Locked
-PATH: C:\Projects\connect-hub-co-recovery-review\stash-49106b-source\apps\web\src\config\khem-navigation.config.ts
+PATH: C:\Projects\holy-yatra-recovery-review\stash-49106b-source\apps\web\src\config\khem-navigation.config.ts
 DATE: stash capture 2026-08-05; current/vault copies later
 TEXT: “KHEM NAVIGATION & VISUAL SHELL PROTECTED SOURCE OF TRUTH”; “DO NOT MODIFY WITHOUT EXPLICIT FOUNDER APPROVAL”; locked public/internal navigation; exact sidebar; approved footer; component/brand locks; AI shell pending Founder alignment; “Unlock -> Modify -> Founder Review -> Approval -> Re-freeze.”
 LIKELY DOCUMENT: distributed WPB/BRS/DPB governance content
@@ -66,7 +66,7 @@ CONFIDENCE: HIGH for Hero-specific locks
 
 4. ARCHIVES INSPECTED
 
-ARCHIVE: C:\Projects\connect-hub-co\KHEM_LAYOUT_SOURCE_CHECK_20260802-181522.zip
+ARCHIVE: C:\Projects\holy-yatra\KHEM_LAYOUT_SOURCE_CHECK_20260802-181522.zip
 DATE: 2026-08-02 18:15:24
 SIZE: 88,762 bytes
 FILE COUNT: 45
@@ -75,7 +75,7 @@ RELEVANT: header/footer/auth, business pages, navigation configuration, business
 CONTENT MATCH: khem-navigation.config.ts — “SOURCE OF TRUTH”
 NO MATCH: exact seven manuals or Phase/Round 1–24
 
-ARCHIVE: C:\Projects\connect-hub-co-recovery-review\stash-49106b-visual-source.zip
+ARCHIVE: C:\Projects\holy-yatra-recovery-review\stash-49106b-visual-source.zip
 DATE: 2026-08-06 09:14:30
 SIZE: 24,409,528 bytes
 FILE COUNT: 71
@@ -118,6 +118,6 @@ Relevant commit/history matches: six distinct relevant commit objects/commits (4
 The original pre-trial planning manuals and phase ledger are not established in the visible/easily attributable source corpus. The strongest surviving governance artifact is the Aug-5 KHEM navigation configuration in stash object 49106b40 and recovery-review extraction. The strongest explicitly numbered planning artifact is Phase 6 in the Zen G page. The c8d45833 July milestone is the oldest strong implementation checkpoint but is not an original planning document.
 
 STRONGEST ORIGINAL PRE-TRIAL PLANNING SOURCE: NONE.
-STRONGEST DISTRIBUTED GOVERNANCE SOURCE: C:\Projects\connect-hub-co-recovery-review\stash-49106b-source\apps\web\src\config\khem-navigation.config.ts (Git object 49106b40 lineage).
+STRONGEST DISTRIBUTED GOVERNANCE SOURCE: C:\Projects\holy-yatra-recovery-review\stash-49106b-source\apps\web\src\config\khem-navigation.config.ts (Git object 49106b40 lineage).
 
 No code, route, database, archive or historical source was modified, restored or deleted.

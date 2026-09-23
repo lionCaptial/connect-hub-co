@@ -29,7 +29,7 @@ export function PartnerDashboard() {
             <span className="text-xl font-bold text-amber-400"></span>
             <div>
               <h1 className="font-serif text-xl font-bold tracking-wide text-white">
-                Connect Hub Co. <span className="text-amber-300 font-sans text-xs font-normal">VERIFIED PRIEST PORTAL</span>
+                Holy Yatra <span className="text-amber-300 font-sans text-xs font-normal">VERIFIED PRIEST PORTAL</span>
               </h1>
               <p className="text-[11px] text-teal-200">
                 Verified Pandit, Purohit & Panda Service Network

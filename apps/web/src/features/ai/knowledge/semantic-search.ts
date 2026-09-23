@@ -142,13 +142,13 @@ export interface PublicKnowledgeSource {
 export const APPROVED_PUBLIC_KNOWLEDGE_SOURCES: readonly PublicKnowledgeSource[] = [
   {
     id: 'public_company_overview', sourceType: 'public-page', route: '/about', category: 'company-info', domain: 'company', intent: 'definition',
-    questions: ['What is Connect Hub Co.?', 'What does Connect Hub Co. do?', 'Tell me about Connect Hub Co.'],
+    questions: ['What is Holy Yatra?', 'What does Holy Yatra do?', 'Tell me about Holy Yatra'],
     approvedContent: 'Our mission is to connect families with Hindu Verified Priests and practical pilgrimage support through clear, respectful, auditable workflows.',
   },
   {
     id: 'public_knowledge_center_overview', sourceType: 'knowledge-guide', route: '/knowledge-center', category: 'company-info', domain: 'knowledge-center', intent: 'definition',
     questions: ['What is the Knowledge Center?', 'What information is in the Knowledge Center?'],
-    approvedContent: 'Welcome to the Connect Hub Co. Knowledge Center. Explore authentic guidance on Vedic rituals, Gaya Ji Pind Daan, lineage records, and pilgrim assistance.',
+    approvedContent: 'Welcome to the Holy Yatra Knowledge Center. Explore authentic guidance on Vedic rituals, Gaya Ji Pind Daan, lineage records, and pilgrim assistance.',
   },
   {
     id: 'public_booking_help', sourceType: 'knowledge-guide', route: '/knowledge-center/guides/booking-and-inquiry-help', category: 'booking', domain: 'booking', intent: 'procedure',
@@ -167,9 +167,9 @@ export const APPROVED_PUBLIC_KNOWLEDGE_SOURCES: readonly PublicKnowledgeSource[]
     approvedContent: 'Ritual service requests cancelled prior to Sastra samagri procurement and priest deployment are eligible for full refund or date rescheduling.',
   },
   {
-    id: 'public_terms', sourceType: 'policy', route: '/terms', category: 'company-info', domain: 'terms', intent: 'policy',
+    id: 'public_terms', sourceType: 'policy', route: '/booking-terms', category: 'company-info', domain: 'terms', intent: 'policy',
     questions: ['What approved service terms apply?', 'What are the service terms?'],
-    approvedContent: 'Connect Hub Co. acts as an authorized coordination platform connecting families with Verified Priests, qualified priests, and travel support providers. Final ritual formats and traditions are confirmed with verified priests.',
+    approvedContent: 'Holy Yatra acts as an authorized coordination platform connecting families with Verified Priests, qualified priests, and travel support providers. Final ritual formats and traditions are confirmed with verified priests.',
   },
   {
     id: 'public_booking_terms', sourceType: 'policy', route: '/booking-terms', category: 'booking', domain: 'booking', intent: 'policy',

@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "Connect Hub Co Backend",
+    "name": "Holy Yatra Backend",
     "description": "Express API at backend/src. Default local port is 5050 (macOS AirPlay uses 5000).\n\nBearer token: run Auth → Login (or Register then Login). The test script stores `token` in `accessToken`.\n\nRoles: CUSTOMER (register default), RELIGIOUS_PARTNER, ADMIN, FOUNDER. Admin/Founder users must be set in Postgres (`User.role`).",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
@@ -266,7 +266,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"serviceName\": \"Pind Daan Gaya\",\n  \"serviceScope\": \"Offline ancestral rites at Gaya.\",\n  \"inclusions\": [\"Purohit coordination\", \"Ritual materials\"],\n  \"exclusions\": [\"Airfare\"],\n  \"basePrice\": \"5000\",\n  \"applicableChargesTaxes\": \"0\",\n  \"currency\": \"INR\",\n  \"validUntil\": \"2026-12-31\",\n  \"notes\": null,\n  \"paymentTerms\": \"100% before service\",\n  \"paymentInstructions\": \"NEFT to the registered Connect Hub account.\"\n}"
+              "raw": "{\n  \"serviceName\": \"Pind Daan Gaya\",\n  \"serviceScope\": \"Offline ancestral rites at Gaya.\",\n  \"inclusions\": [\"Purohit coordination\", \"Ritual materials\"],\n  \"exclusions\": [\"Airfare\"],\n  \"basePrice\": \"5000\",\n  \"applicableChargesTaxes\": \"0\",\n  \"currency\": \"INR\",\n  \"validUntil\": \"2026-12-31\",\n  \"notes\": null,\n  \"paymentTerms\": \"100% before service\",\n  \"paymentInstructions\": \"NEFT to the registered Holy Yatra account.\"\n}"
             },
             "url": "{{baseUrl}}/api/commercial-workflows/{{referenceId}}/quotations"
           }
@@ -286,7 +286,7 @@
             "header": [{ "key": "Content-Type", "value": "application/json" }],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"serviceName\": \"Pind Daan Gaya\",\n  \"serviceScope\": \"Revised scope.\",\n  \"inclusions\": [\"Purohit coordination\"],\n  \"exclusions\": [\"Airfare\", \"Hotel\"],\n  \"basePrice\": \"4500\",\n  \"applicableChargesTaxes\": \"0\",\n  \"currency\": \"INR\",\n  \"paymentTerms\": \"100% before service\",\n  \"paymentInstructions\": \"NEFT to the registered Connect Hub account.\"\n}"
+              "raw": "{\n  \"serviceName\": \"Pind Daan Gaya\",\n  \"serviceScope\": \"Revised scope.\",\n  \"inclusions\": [\"Purohit coordination\"],\n  \"exclusions\": [\"Airfare\", \"Hotel\"],\n  \"basePrice\": \"4500\",\n  \"applicableChargesTaxes\": \"0\",\n  \"currency\": \"INR\",\n  \"paymentTerms\": \"100% before service\",\n  \"paymentInstructions\": \"NEFT to the registered Holy Yatra account.\"\n}"
             },
             "url": "{{baseUrl}}/api/commercial-workflows/{{referenceId}}/quotations/{{quotationId}}/revise"
           }

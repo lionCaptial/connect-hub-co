@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { SiteBackButton } from '@/components/common/SiteBackButton';
 import { VahiPriceMatrixAccess } from './VahiPriceMatrixAccess';
 import styles from './VahiApprovedContent.module.css';
 
@@ -75,6 +76,7 @@ export function VahiApprovedContent() {
   return (
     <div className={`${styles.page} business-inner-page`}>
       <section className={`${styles.intro} ${styles.vahiHeroBanner}`} aria-labelledby="vahi-content-title">
+        <SiteBackButton />
         <Image className={styles.vahiHeroImage} src="/images/heroes/hero-4/vahi-records-page-hero.png" alt="Traditional Vahi ancestral records" fill sizes="100vw" priority />
         <div className={styles.vahiHeroShade} aria-hidden="true" />
         <div className={styles.vahiHeroCopy}><h1 id="vahi-content-title"><span>Wisdom Preserved by Tradition</span><span>Rediscovered by You.</span></h1></div>
@@ -100,7 +102,7 @@ export function VahiApprovedContent() {
       <section className={styles.section} aria-labelledby="what-vahi-title">
         <h2 className={styles.aboutHeading} id="what-vahi-title">About Vahi (Panji) Records</h2>
         <p>Vahi (Panji) are centuries-old, handwritten sacred genealogical records that document ancestral family lineages, pilgrimage histories, and sacred ritual timelines. Historically preserved on Tamra Patra (copper plates) or Bhojpatra (birch bark), modern records are maintained meticulously on paper, typically spanning up to six generations or more. This uninterrupted custom has been preserved continuously since around 1700 CE by the Gayawal Pandas, a hereditary Brahmin community centered in the holy city of Gaya Ji, Bihar, India.</p>
-        <p>Connect Hub Co. provides dedicated guidance, technology-enabled coordination, and facilitation through verified traditional Pandas. Our mission is to bridge age-old tradition with modern accessibility—helping families transparently explore their ancestral roots, map their heritage, and pass down invaluable lineage clarity to future generations, while completely honoring established religious customs and the absolute authority of the original custodians.</p>
+        <p>Holy Yatra provides dedicated guidance, technology-enabled coordination, and facilitation through verified traditional Pandas. Our mission is to bridge age-old tradition with modern accessibility—helping families transparently explore their ancestral roots, map their heritage, and pass down invaluable lineage clarity to future generations, while completely honoring established religious customs and the absolute authority of the original custodians.</p>
       </section>
 
       <details className={styles.scopeDisclosure}>
@@ -114,7 +116,7 @@ export function VahiApprovedContent() {
 
       <section className={`${styles.section} ${styles.understandingBox}`} aria-labelledby="information-title">
         <h3 id="information-title">Understanding Vahi Records</h3>
-        <p className={styles.informationStrip}><strong>Role Definition:</strong> Connect Hub Co. operates purely as a logistics and coordination facilitator. We respect the absolute ownership of the original traditional custodians. We do not alter, create, recreate, certify, or authenticate these historical records for any purpose.</p>
+        <p className={styles.informationStrip}><strong>Role Definition:</strong> Holy Yatra operates purely as a logistics and coordination facilitator. We respect the absolute ownership of the original traditional custodians. We do not alter, create, recreate, certify, or authenticate these historical records for any purpose.</p>
           <p className={styles.informationStrip}>Where records are unavailable, incomplete, damaged, or cannot be verified, this is communicated honestly.</p>
           <ul className={styles.informationBoxGrid}>
           <li>Information is presented only as available from the original sources.</li>

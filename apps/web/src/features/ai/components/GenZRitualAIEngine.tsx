@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { priestTerminology } from '@/lib/priest-terminology';
 
@@ -32,7 +32,7 @@ export type ServiceIntent = {
 
 const NEUTRAL_RESPONSE_MESSAGE = 'Your AI guidance and important response updates will appear here.';
 const MISUSE_RESPONSE_MESSAGE = 'This request cannot be supported. GenZ AI is intended for legitimate service, guidance, knowledge, tracking, and support use. Abusive, unlawful, harmful, fraudulent, or intentionally disruptive requests may be refused or restricted.';
-const OUT_OF_PURPOSE_RESPONSE_MESSAGE = 'This request is outside the supported purpose of GenZ AI. Please use the platform for Connect Hub Co. services, approved knowledge, tracking, and authorised support.';
+const OUT_OF_PURPOSE_RESPONSE_MESSAGE = 'This request is outside the supported purpose of GenZ AI. Please use the platform for Holy Yatra services, approved knowledge, tracking, and authorised support.';
 
 export const MISUSE_PATTERNS = [
   /\b(?:help|teach|show|tell)\s+me\s+(?:how\s+to\s+)?(?:hack|steal|scam|defraud|attack|harm|kill|threaten|bypass)\b/i,
@@ -144,8 +144,8 @@ const GUIDED_TOPIC_GROUPS: readonly { group: string; topics: readonly { label: s
 ];
 
 const TRUST_STATEMENTS = [
-  { label: 'Trusted & Private', icon: <ShieldIcon />, tone: 'border-amber-300 bg-amber-50 text-amber-900' },
-  { label: 'Complete Privacy', icon: '🔒', tone: 'border-amber-200 bg-amber-50 text-amber-800' },
+  { label: 'Trusted & Private', icon: <ShieldIcon />, tone: 'border-[color:var(--ch-hairline)] bg-[var(--ch-accent-soft)] text-[var(--ch-ink)]' },
+  { label: 'Complete Privacy', icon: '🔒', tone: 'border-[color:var(--ch-hairline)] bg-[var(--ch-bg)] text-[var(--ch-ink-muted)]' },
   { label: 'Secure & Safe', icon: '✓', tone: 'border-cyan-300 bg-cyan-50 text-cyan-700 shadow-[0_0_12px_rgba(34,211,238,0.45)] [text-shadow:0_0_8px_rgba(34,211,238,0.8)]' },
   { label: 'Confidential First', icon: <ShieldIcon />, tone: 'border-teal-200 bg-teal-50 text-teal-800' },
 ];
@@ -159,7 +159,7 @@ const GlobalAccessIcon = () => (
 );
 
 const SERVICE_ASSURANCE_STATEMENTS = [
-  { label: 'Background Screened', icon: <PartnerUserPlusIcon />, tone: 'border-amber-300 bg-amber-50 text-amber-900' },
+  { label: 'Background Screened', icon: <PartnerUserPlusIcon />, tone: 'border-[color:var(--ch-hairline)] bg-[var(--ch-accent-soft)] text-[var(--ch-ink)]' },
   { label: 'Global Access', icon: <GlobalAccessIcon />, tone: 'border-cyan-200 bg-cyan-50 text-cyan-800' },
   { label: 'Hassle-Free Guidance', icon: <QuestionCircleIcon />, tone: 'border-teal-200 bg-teal-50 text-teal-800' },
   { label: '100% Transparent', icon: '◉', tone: 'border-orange-200 bg-orange-50 text-orange-800' },

@@ -24,7 +24,7 @@ const steps = [
 ] as const;
 
 export default function OfflinePage() {
-  return <FuturePathPage eyebrow="OFFLINE ANCESTRAL SERVICES" title="In-Person PitruMoksha Gaya Services" description="The complete Offline service page is being prepared. Families may raise an inquiry now for Verified Priest coordination, ritual planning and local assistance in Gaya." breadcrumb={[{label:'Connect Hub Co.',href:'/'},{label:'PitruMoksha Gaya',href:PITRU_MOKSHA_GAYA_ROUTE},{label:'Offline'}]}>
+  return <FuturePathPage eyebrow="OFFLINE ANCESTRAL SERVICES" title="In-Person PitruMoksha Gaya Services" description="The complete Offline service page is being prepared. Families may raise an inquiry now for Verified Priest coordination, ritual planning and local assistance in Gaya." breadcrumb={[{label:'Holy Yatra',href:'/'},{label:'PitruMoksha Gaya',href:PITRU_MOKSHA_GAYA_ROUTE},{label:'Offline'}]}>
     <section className={styles.overview} id="pitra-aatma-shanti" aria-labelledby="offline-journey-title">
       <div><p>THE IN-PERSON JOURNEY</p><h2 id="offline-journey-title">Guiding Families on the Path of Ancestral Peace and Moksha.</h2><p>PitruMoksha Gaya provides end-to-end ancestral ritual guidance and local coordination for families travelling to Gaya, delivered through Verified Priests with respectful assistance from preparation through completion.</p></div>
       <ul>{supportItems.map((item)=><li key={item}><BusinessPageIcon name="check" /><span>{item}</span></li>)}</ul>

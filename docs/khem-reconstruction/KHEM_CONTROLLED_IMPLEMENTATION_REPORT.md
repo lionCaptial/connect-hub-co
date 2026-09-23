@@ -23,7 +23,7 @@ Architecture blockers after fence review: **0**.
 
 | Source path | Destination path | Referenced by | SHA-256 | Identity evidence |
 |---|---|---|---|---|
-| `C:\Projects\connect-hub-co-recovery-review\stash-49106b-source\apps\web\public\images\hero\Hero_1_PitruMoksha_Gaya_Final_v2.0.png` | `apps/web/public/images/hero/Hero_1_PitruMoksha_Gaya_Final_v2.0.png` | `components/business-pages/online/OnlineAncestralPage.tsx` | `6A8D65D24C0BDDBA7190DA4F9E08A5CD383244B0297D86256A9AB973A40E8F3F` | Exact historical component filename/path, exact recovery-tree filename, Hero 1/online ancestral ownership, preserved hash |
+| `C:\Projects\holy-yatra-recovery-review\stash-49106b-source\apps\web\public\images\hero\Hero_1_PitruMoksha_Gaya_Final_v2.0.png` | `apps/web/public/images/hero/Hero_1_PitruMoksha_Gaya_Final_v2.0.png` | `components/business-pages/online/OnlineAncestralPage.tsx` | `6A8D65D24C0BDDBA7190DA4F9E08A5CD383244B0297D86256A9AB973A40E8F3F` | Exact historical component filename/path, exact recovery-tree filename, Hero 1/online ancestral ownership, preserved hash |
 
 Assets recovered: **1**.
 

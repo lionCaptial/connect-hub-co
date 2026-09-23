@@ -17,15 +17,28 @@ export const ROUTES = {
   COMPLAINT: '/complaint',
   GRIEVANCE: '/grievance',
   FOUNDER_SUPPORT: '/founder-support',
-  POLICIES_LEGAL_TERMS: '/policies-and-legal-terms',
-  REFUND_POLICY: '/refund-policy',
   PRIVACY_POLICY: '/privacy-policy',
-  TERMS: '/terms',
   BOOKING_TERMS: '/booking-terms',
   CANCELLATION_POLICY: '/cancellation-policy',
+  /** @deprecated Prefer PRIVACY_POLICY */
+  POLICIES_LEGAL_TERMS: '/privacy-policy',
+  /** @deprecated Prefer CANCELLATION_POLICY; kept as alias for redirects/callers */
+  REFUND_POLICY: '/cancellation-policy',
+  /** @deprecated Prefer BOOKING_TERMS */
+  TERMS: '/booking-terms',
   LOGIN: '/login',
+  ACCOUNT: '/account',
+  ACCOUNT_SERVICE_REQUESTS: '/account/service-requests',
+  ACCOUNT_REGISTRATIONS: '/account/registrations',
+  ACCOUNT_PROFILE: '/account/profile',
   DASHBOARD: '/dashboard',
   WHATSAPP: '/contact?channel=whatsapp',
+  SERVICE_JOURNEY_QUOTATION: '/service-journey/quotation-agreement',
+  SERVICE_JOURNEY_PAYMENT: '/service-journey/payment-confirmation',
+  SERVICE_JOURNEY_FULFILMENT: '/service-journey/fulfilment-closure',
+  TRACK_REGISTRATION: '/tracking?type=partner',
+  TRACK_TRAVEL_COMPANION_REGISTRATION: '/tracking?type=companion',
+  TRAVEL_COMPANION_REGISTER: '/travel-assistance/companion-register',
 } as const;
 
 export type RouteKey = keyof typeof ROUTES;

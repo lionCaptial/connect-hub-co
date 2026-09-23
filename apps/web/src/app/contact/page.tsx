@@ -6,23 +6,24 @@ import { WhatsAppIcon } from '@/components/common/WhatsAppIcon';
 import { GeneralInquiryForm } from '@/components/inquiry/GeneralInquiryForm';
 
 export const metadata: Metadata = {
-  title: 'Inquiry & Support | Connect Hub Co.',
-  description: 'General inquiries, support requests, service questions, and mail assistance for Connect Hub Co.',
+  title: 'Inquiry & Support | Holy Yatra',
+  description: 'General inquiries, support requests, service questions, and mail assistance for Holy Yatra',
 };
 
 export default function InquiryPage() {
   return (
     <PublicHeroShell>
-      <main className="business-inner-page bg-amber-50 px-6 py-8 sm:py-10 text-stone-900 rounded-2xl">
-        <div className="mx-auto max-w-4xl">          <section className="rounded-2xl border border-orange-200 bg-[#FFF4E6] px-6 py-5 shadow-sm">
-            <div className="flex items-center justify-between gap-4">
-              <p className="font-semibold tracking-widest text-orange-800 uppercase text-xl sm:text-2xl">
+      <main className="business-inner-page bg-[var(--ch-bg)] px-4 py-6 sm:px-6 sm:py-10 text-[var(--ch-ink)] rounded-2xl">
+        <div className="mx-auto max-w-4xl">
+          <section className="rounded-2xl border border-[color:var(--ch-hairline)] bg-[var(--ch-accent-soft)] px-6 py-5">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="font-semibold tracking-widest text-[var(--ch-accent)] uppercase text-lg sm:text-2xl">
                 General Support & Inquiries
               </p>
 
               <a
                 href="/zen-g"
-                className="inline-flex items-center gap-2 rounded-full border border-[#D4AF37] bg-[#0A4F56] px-4 py-2 font-semibold text-white"
+                className="inline-flex w-fit items-center gap-2 rounded-full bg-[var(--ch-accent)] px-4 py-2.5 font-semibold text-white"
               >
                 <span className="flex h-8 w-8 items-center justify-center [&>svg]:h-8 [&>svg]:w-8">
                   <MulticolourAiBrainIcon />
@@ -31,41 +32,41 @@ export default function InquiryPage() {
               </a>
             </div>
 
-            <p className="mt-4 max-w-2xl text-lg text-stone-700 leading-relaxed">
+            <p className="mt-4 max-w-2xl text-lg text-[var(--ch-ink-muted)] leading-relaxed">
               Have a question about our services, tradition protocols, or pilgrim support? Use the approved email channel or review the inquiry form below.
             </p>
 
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm flex items-center gap-4">
-                <div className="grid h-12 w-12 place-items-center rounded-xl border border-sky-300 bg-[#064E59] text-sky-200">
+              <div className="rounded-2xl border border-[color:var(--ch-hairline)] bg-[var(--ch-bg-elevated)] p-5 flex items-center gap-4">
+                <div className="grid h-12 w-12 place-items-center rounded-xl border border-[color:var(--ch-hairline)] bg-[var(--ch-accent)] text-[var(--ch-accent-soft)]">
                   <HeaderMailIcon className="h-6 w-6" />
                 </div>
                 <div>
-                  <strong className="block text-xs uppercase tracking-wider text-stone-500">Official Company Email</strong>
-                  <a className="text-sm font-semibold text-stone-900 hover:text-orange-900" href="mailto:support@connecthubco.com">
-                    support@connecthubco.com
+                  <strong className="block text-xs uppercase tracking-wider text-[var(--ch-ink-muted)]">Official Company Email</strong>
+                  <a className="text-sm font-semibold text-[var(--ch-ink)] hover:text-[var(--ch-accent)]" href="mailto:support@holyyatra.com">
+                    support@holyyatra.com
                   </a>
                 </div>
               </div>
 
-              <div className="rounded-2xl border border-stone-200 bg-white p-5 shadow-sm flex items-center gap-4">
-                <div className="grid h-12 w-12 place-items-center rounded-xl border border-[#25D366] bg-[#064E59] text-[#5BE58B]">
+              <div className="rounded-2xl border border-[color:var(--ch-hairline)] bg-[var(--ch-bg-elevated)] p-5 flex items-center gap-4">
+                <div className="grid h-12 w-12 place-items-center rounded-xl border border-[#25D366] bg-[var(--ch-accent)] text-[#5BE58B]">
                   <WhatsAppIcon className="h-6 w-6" />
                 </div>
                 <div>
-                  <strong className="block text-xs uppercase tracking-wider text-stone-500">WhatsApp Contact</strong>
-                  <span className="text-sm font-semibold text-stone-600">+91-9334455665</span>
+                  <strong className="block text-xs uppercase tracking-wider text-[var(--ch-ink-muted)]">WhatsApp Contact</strong>
+                  <span className="text-sm font-semibold text-[var(--ch-ink-muted)]">+91-9334455665</span>
                 </div>
               </div>
             </div>
           </section>
-{/* General Inquiry Form */}
-          <div className="mt-10 rounded-2xl bg-white p-8 shadow-sm border border-stone-200">
-            <h2 className="text-2xl font-serif font-bold text-stone-950 mb-2">General Inquiry Form</h2>
-            <p className="text-xs text-stone-500 mb-6">For service bookings, please use our dedicated Booking Page.</p>
+          {/* General Inquiry Form */}
+          <div className="mt-10 rounded-2xl bg-[var(--ch-bg-elevated)] p-8 border border-[color:var(--ch-hairline)] shadow-[var(--ch-shadow-soft)]">
+            <h2 className="text-2xl font-serif font-bold text-[var(--ch-ink)] mb-2">General Inquiry Form</h2>
+            <p className="text-xs text-[var(--ch-ink-muted)] mb-6">For service bookings, please use our dedicated Booking Page.</p>
             <GeneralInquiryForm />
           </div>
-          </div>
+        </div>
       </main>
     </PublicHeroShell>
   );

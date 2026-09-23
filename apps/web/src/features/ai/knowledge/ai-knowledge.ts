@@ -81,7 +81,7 @@ export const APPROVED_AI_KNOWLEDGE_TREES: Record<BusinessCategory, AIConversatio
   'company-info': {
     categoryId: 'company-info',
     title: 'Company Governance & Info AI',
-    greeting: 'Namaste! Welcome to Connect Hub Co. How may I assist you with company details, policies, or guidance?',
+    greeting: 'Namaste! Welcome to Holy Yatra How may I assist you with company details, policies, or guidance?',
     initialPrompts: [],
     fallbackResponse: 'Approved public knowledge is currently being updated. Please use Raise Inquiry for assistance.',
   },

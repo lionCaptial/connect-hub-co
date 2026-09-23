@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { BusinessPageShell, type BusinessPageShellProps } from '@/components/business-pages/BusinessPageShell';
 
 export const metadata: Metadata = {
-  title: 'Offline On-Site Ritual Services | Connect Hub Co.',
+  title: 'Offline On-Site Ritual Services | Holy Yatra',
   description: 'In-person Vedic pujas, homams, Griha Pravesh, and sacred ceremonies coordinated at your home or pilgrimage destinations across India & Nepal.',
 };
 
 const offlineRitualData: BusinessPageShellProps = {
   breadcrumb: [
-    { label: 'Connect Hub Co.', href: '/' },
+    { label: 'Holy Yatra', href: '/' },
     { label: 'Ritual Services', href: '/ritual-services' },
     { label: 'Offline Ritual Services' },
   ],
@@ -35,7 +35,7 @@ const offlineRitualData: BusinessPageShellProps = {
       icon: 'offline',
     },
   ],
-  overviewTitle: 'Why Choose On-Site Coordination With Connect Hub Co.',
+  overviewTitle: 'Why Choose On-Site Coordination With Holy Yatra',
   overviewCopy: 'We take complete responsibility for priest verification, sacred ingredient purity, venue arrangement, and transparent Dakshina.',
   overviewPoints: [
     'Available across 15+ major sacred destinations and cities.',

@@ -58,7 +58,7 @@ export function AdminDashboard() {
             <span className="text-xl font-bold text-amber-400"></span>
             <div>
               <h1 className="font-serif text-xl font-bold tracking-wide text-white">
-                Connect Hub Co. <span className="text-amber-400 font-sans text-xs font-normal">ADMIN ERP</span>
+                Holy Yatra <span className="text-amber-400 font-sans text-xs font-normal">ADMIN ERP</span>
               </h1>
               <p className="text-[11px] text-teal-200">
                 Unified Operations, CRM, AI Review & Service Dispatch
@@ -232,7 +232,7 @@ export function AdminDashboard() {
                 <div className="rounded-2xl border border-teal-900/20 bg-white p-6 shadow-sm space-y-4">
                   <h2 className="font-serif text-2xl text-teal-900">System Activity Overview</h2>
                   <p className="text-xs text-stone-600 leading-relaxed">
-                    The Connect Hub Co. Unified Admin Dashboard manages end-to-end Operations across all 5 business modules: 
+                    The Holy Yatra Unified Admin Dashboard manages end-to-end Operations across all 5 business modules: 
                     <strong>PitruMoksha Gaya</strong>, <strong>Ritual Services</strong>, <strong>Sacred Travel</strong>, <strong>Vahi Records</strong>, and <strong>Verified Priest Network</strong>.
                   </p>
                   <div className="grid gap-4 sm:grid-cols-2 text-xs">

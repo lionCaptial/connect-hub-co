@@ -49,7 +49,7 @@ export const v15PageContent = {
       "blocks": [
         {
           "kind": "paragraph",
-          "text": "PitruMoksha Gaya is a specialized ancestral-ritual coordination service platform powered by Connect Hub Co. We honor responsibility and bridge the miles by connecting you directly with the legitimate, historical custodians of Gaya’s sacred rites."
+          "text": "PitruMoksha Gaya is a specialized ancestral-ritual coordination service platform powered by Holy Yatra We honor responsibility and bridge the miles by connecting you directly with the legitimate, historical custodians of Gaya’s sacred rites."
         },
         {
           "kind": "paragraph",
@@ -266,7 +266,7 @@ export const v15PageContent = {
             ],
             [
               "3. Independent Ritual Verification",
-              "Connect Hub Co. verifies the service arrangement, assignment, agreed scope, and completion records through operational controls. This is an independent coordination and record-control function."
+              "Holy Yatra verifies the service arrangement, assignment, agreed scope, and completion records through operational controls. This is an independent coordination and record-control function."
             ],
             [
               "4. End-to-End Ritual Management",
@@ -417,11 +417,11 @@ export const v15PageContent = {
         },
         {
           "kind": "heading",
-          "text": "Who is Connect Hub Co. & What We Do"
+          "text": "Who is Holy Yatra & What We Do"
         },
         {
           "kind": "paragraph",
-          "text": "Introduction: Connect Hub Co. is a technology-enabled, human and virtual assisted service company. It provides structured guidance, coordination, customer support, and end-to-end assistance through Verified Priests."
+          "text": "Introduction: Holy Yatra is a technology-enabled, human and virtual assisted service company. It provides structured guidance, coordination, customer support, and end-to-end assistance through Verified Priests."
         },
         {
           "kind": "paragraph",
@@ -705,7 +705,7 @@ export const v15PageContent = {
         },
         {
           "kind": "step",
-          "text": "Step 9 — Ritual Execution:The officiating Gayawal Panda performs the ceremony according to the authorized ritual scope, while Connect Hub Co. manages the approved operational support."
+          "text": "Step 9 — Ritual Execution:The officiating Gayawal Panda performs the ceremony according to the authorized ritual scope, while Holy Yatra manages the approved operational support."
         },
         {
           "kind": "phase",

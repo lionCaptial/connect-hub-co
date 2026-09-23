@@ -3,7 +3,7 @@ import { BusinessServiceDetail } from "@/components/service-catalog/BusinessServ
 import { PublicHeroShell } from "@/features/public-shell";
 
 export const metadata: Metadata = {
-  title: "Service details | Connect Hub Co",
+  title: "Service details | Holy Yatra",
   description: "Service information, eligibility, materials, duration, and enquiry options.",
 };
 

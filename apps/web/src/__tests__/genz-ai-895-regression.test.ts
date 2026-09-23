@@ -216,8 +216,8 @@ const discoveredRoutes = discoverPages(join(process.cwd(), 'apps/web/src/app')).
 const classifiedRoutes = discoveredRoutes.map((path) => ({ path, classification: classifyRoute(path) }));
 
 const publicKnowledgeChecks = [
-  { source: '/', query: 'What is Connect Hub Co.?' },
-  { source: '/about', query: 'What is Connect Hub Co.?' },
+  { source: '/', query: 'What is Holy Yatra?' },
+  { source: '/about', query: 'What is Holy Yatra?' },
   { source: '/booking-terms', query: 'What approved booking terms apply?' },
   { source: '/cancellation-policy', query: 'What is the cancellation policy?' },
   { source: '/knowledge-center', query: 'What is the Knowledge Center?' },

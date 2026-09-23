@@ -1,14 +1,14 @@
 .shell {
-  --genz-teal: #064e59;
-  --genz-teal-mid: #087f8c;
-  --genz-gold: #d4af37;
-  --genz-gold-soft: #f6c64f;
-  --genz-ink: #0b1f33;
-  --genz-muted: #4a6578;
-  --genz-canvas: #fffdfa;
-  --genz-user: #064e59;
-  --genz-bot: #ffffff;
-  --genz-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --genz-teal: var(--ch-accent);
+  --genz-teal-mid: var(--ch-accent);
+  --genz-gold: var(--ch-gold-soft);
+  --genz-gold-soft: var(--ch-accent-soft);
+  --genz-ink: var(--ch-ink);
+  --genz-muted: var(--ch-ink-muted);
+  --genz-canvas: var(--ch-bg);
+  --genz-user: var(--ch-accent);
+  --genz-bot: var(--ch-bg-elevated);
+  --genz-ease: var(--ch-ease);
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -17,12 +17,11 @@
   overflow: hidden;
   color: var(--genz-ink);
   background:
-    radial-gradient(120% 80% at 0% 0%, rgba(8, 127, 140, 0.08), transparent 55%),
-    radial-gradient(90% 70% at 100% 0%, rgba(212, 175, 55, 0.1), transparent 50%),
+    var(--ch-band-wash),
     var(--genz-canvas);
-  border: 1px solid rgba(8, 127, 140, 0.22);
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(6, 78, 89, 0.1);
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
+  box-shadow: var(--ch-shadow-soft);
 }
 
 .shellFloating {
@@ -288,12 +287,12 @@
 }
 
 .bubbleBotPending {
-  border-color: rgba(180, 130, 35, 0.45);
-  background: #fffbeb;
+  border-color: var(--ch-hairline);
+  background: var(--ch-accent-soft);
 }
 
 .bubbleBotPending .bubbleMeta {
-  color: #92400e;
+  color: var(--ch-accent);
 }
 
 .bubbleBotOk {

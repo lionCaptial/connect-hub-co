@@ -1,0 +1,161 @@
+.main {
+  min-height: 70vh;
+  background: var(--ch-bg);
+  color: var(--ch-ink);
+  padding: 2.5rem 1.5rem;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 64rem;
+}
+
+.card {
+  border: 1px solid var(--ch-hairline);
+  border-radius: 1rem;
+  background: var(--ch-bg-elevated);
+  box-shadow: var(--ch-shadow-soft);
+  padding: 1.5rem;
+}
+
+.eyebrow {
+  color: var(--ch-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  margin: 0.5rem 0 0;
+  color: var(--ch-ink);
+}
+
+.intro {
+  color: var(--ch-ink-muted);
+  font-size: 1rem;
+  line-height: 1.75;
+  margin: 1rem 0 0;
+  max-width: 52rem;
+}
+
+.steps {
+  margin: 1.5rem 0 0;
+  padding-left: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.stepItem {
+  padding-left: 0.25rem;
+}
+
+.stepTitle {
+  color: var(--ch-ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stepBody {
+  color: var(--ch-ink-muted);
+  line-height: 1.65;
+  margin: 0.35rem 0 0;
+}
+
+.notes {
+  margin: 1.5rem 0 0;
+  background: var(--ch-accent-soft);
+  border: 1px solid var(--ch-hairline);
+  border-radius: 0.75rem;
+  color: var(--ch-ink);
+  display: grid;
+  gap: 0.4rem;
+  line-height: 1.55;
+  list-style: disc;
+  padding: 0.9rem 1rem 0.9rem 2rem;
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.primaryCta,
+.secondaryCta {
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease, filter 0.15s var(--ch-ease);
+}
+
+.primaryCta {
+  background: var(--ch-accent-soft);
+  color: var(--ch-ink);
+}
+
+.primaryCta:hover {
+  filter: brightness(0.98);
+}
+
+.secondaryCta {
+  background: var(--ch-bg-elevated);
+  border: 1px solid var(--ch-hairline);
+  color: var(--ch-ink);
+}
+
+.secondaryCta:hover {
+  border-color: var(--ch-accent);
+}
+
+.journeyNav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.journeyLink {
+  color: var(--ch-accent);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.journeyLink:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .card {
+    padding: 1.15rem;
+  }
+
+  .ctaRow {
+    flex-direction: column;
+  }
+
+  .primaryCta,
+  .secondaryCta {
+    width: 100%;
+    min-height: 2.75rem;
+    justify-content: center;
+  }
+
+  .journeyNav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

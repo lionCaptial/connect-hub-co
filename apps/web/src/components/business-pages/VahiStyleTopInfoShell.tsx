@@ -1,14 +1,36 @@
 import Image from 'next/image';
 import type { ReactNode } from 'react';
 
+import { SiteBackButton } from '@/components/common/SiteBackButton';
 import vahiStyles from './vahi-records/VahiApprovedContent.module.css';
 
-export function VahiStyleTopInfoShell({ imageSrc, secondaryImageSrc, imageAlign, imageFit = "contain", imageUnmasked = false, children }: { readonly imageSrc?: string; readonly secondaryImageSrc?: string; readonly imageAlign?: "left" | "center"; readonly imageFit?: "contain" | "cover" | "fill"; readonly imageUnmasked?: boolean; readonly children?: ReactNode }) {
+export function VahiStyleTopInfoShell({
+  imageSrc,
+  secondaryImageSrc,
+  imageAlign,
+  imageFit = 'contain',
+  imageUnmasked = false,
+  children,
+}: {
+  readonly imageSrc?: string;
+  readonly secondaryImageSrc?: string;
+  readonly imageAlign?: 'left' | 'center';
+  readonly imageFit?: 'contain' | 'cover' | 'fill';
+  readonly imageUnmasked?: boolean;
+  readonly children?: ReactNode;
+}) {
+  const hasHeroImage = Boolean(imageSrc);
+
   return (
     <section
-      className={`${vahiStyles.intro} h-[237px] ${imageSrc ? `relative w-full overflow-hidden !m-0 !p-0 ${imageUnmasked ? '' : 'bg-[#01090F]'}` : ''}`}
-      aria-hidden="true"
+      className={`${vahiStyles.intro} h-[237px] ${
+        hasHeroImage
+          ? `relative w-full overflow-hidden !m-0 !p-0 ${imageUnmasked ? '' : 'bg-[#01090F]'}`
+          : ''
+      }`}
+      aria-hidden={hasHeroImage ? undefined : 'true'}
     >
+      {hasHeroImage ? <SiteBackButton /> : null}
       {imageSrc && secondaryImageSrc ? (
         <div className="flex h-full w-full gap-0">
           {[imageSrc, secondaryImageSrc].map((src) => (
@@ -21,7 +43,9 @@ export function VahiStyleTopInfoShell({ imageSrc, secondaryImageSrc, imageAlign,
         <Image
           alt=""
           loading="eager"
-        className={`block h-full w-full ${imageUnmasked ? "opacity-100 brightness-100 filter-none" : ""} ${imageFit === "cover" ? "object-cover" : imageFit === "fill" ? "object-fill" : "object-contain"} ${imageAlign === "left" ? "object-left" : "object-center"}`}
+          className={`block h-full w-full ${imageUnmasked ? 'opacity-100 brightness-100 filter-none' : ''} ${
+            imageFit === 'cover' ? 'object-cover' : imageFit === 'fill' ? 'object-fill' : 'object-contain'
+          } ${imageAlign === 'left' ? 'object-left' : 'object-center'}`}
           height={834}
           src={imageSrc}
           width={1886}
@@ -31,4 +55,3 @@ export function VahiStyleTopInfoShell({ imageSrc, secondaryImageSrc, imageAlign,
     </section>
   );
 }
-

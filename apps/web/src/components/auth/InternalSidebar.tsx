@@ -29,7 +29,7 @@ export function InternalSidebar({ children }: { children: React.ReactNode }) {
             ॐ
           </span>
           <span>
-            <strong className="block text-white font-serif">Connect Hub Co</strong>
+            <strong className="block text-white font-serif">Holy Yatra</strong>
             <span className="text-xs text-stone-400">Operations workspace</span>
           </span>
         </Link>
@@ -113,7 +113,7 @@ export function InternalSidebar({ children }: { children: React.ReactNode }) {
           {open ? "Close" : "Menu"}
         </button>
         <Link className="ml-4 font-bold" href="/dashboard">
-          Connect Hub ERP
+          Holy Yatra ERP
         </Link>
         <Link className="ml-auto rounded bg-orange-700 px-3 py-2 text-sm" href="/zen-g">
           Ask GenZ AI

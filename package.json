@@ -1,9 +1,9 @@
 {
-  "name": "connect-hub-co",
+  "name": "holy-yatra",
   "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@11.9.0",
-  "description": "Connect Hub Co. - AI-powered service platform",
+  "description": "Holy Yatra - AI-powered service platform",
   "license": "UNLICENSED",
   "scripts": {
     "build": "turbo run build",

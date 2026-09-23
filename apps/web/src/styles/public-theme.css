@@ -16,4 +16,27 @@
   );
   --ch-radius: 12px;
   --ch-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Composition tokens — shared public page rhythm */
+  --ch-content-max: 1120px;
+  --ch-content-narrow: 960px;
+  --ch-gutter: 2.5rem;
+  --ch-section-y: clamp(3.25rem, 6vw, 5.5rem);
+  --ch-section-x: clamp(1.25rem, 4vw, 3rem);
+  --ch-hairline: color-mix(in srgb, var(--ch-accent) 18%, transparent);
+  --ch-band-wash: radial-gradient(
+    900px 280px at 12% 0%,
+    color-mix(in srgb, var(--ch-accent) 10%, transparent),
+    transparent 62%
+  );
+  --ch-focus-ring: 3px solid color-mix(in srgb, var(--ch-accent) 45%, transparent);
+  --ch-shadow-soft: 0 12px 32px color-mix(in srgb, var(--ch-ink) 8%, transparent);
+}
+
+@media (max-width: 720px) {
+  :root {
+    --ch-gutter: 1.25rem;
+    --ch-section-y: clamp(2.25rem, 8vw, 3.25rem);
+    --ch-section-x: clamp(1rem, 4vw, 1.5rem);
+  }
 }

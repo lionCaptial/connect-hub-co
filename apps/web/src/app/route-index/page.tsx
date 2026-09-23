@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { ROUTES } from '@/config/navigation';
 
 export const metadata: Metadata = {
-  title: 'KHEM Sitemap & Information Architecture | Connect Hub Co.',
-  description: 'Complete sitemap, page hierarchy index, and canonical route matrix for Connect Hub Co.',
+  title: 'KHEM Sitemap & Information Architecture | Holy Yatra',
+  description: 'Complete sitemap, page hierarchy index, and canonical route matrix for Holy Yatra',
 };
 
 const iaGroups = [
@@ -42,8 +42,9 @@ const iaGroups = [
       ['Complaint Form', ROUTES.COMPLAINT],
       ['Grievance Form', ROUTES.GRIEVANCE],
       ['Founder Support Escalation', ROUTES.FOUNDER_SUPPORT],
-      ['Policies & Legal Terms', ROUTES.POLICIES_LEGAL_TERMS],
-      ['Refund Policy', ROUTES.REFUND_POLICY],
+      ['Privacy Policy', ROUTES.PRIVACY_POLICY],
+      ['Booking Terms & Conditions', ROUTES.BOOKING_TERMS],
+      ['Cancellation & Refund Policy', ROUTES.CANCELLATION_POLICY],
       ['Login / Sign Up', ROUTES.LOGIN],
     ],
   },
@@ -67,7 +68,7 @@ export default function RouteIndexPage() {
   return (
     <main className="min-h-screen bg-stone-100 p-6 sm:p-10 text-stone-900">
       <div className="mx-auto max-w-5xl">
-        <p className="text-xs font-semibold tracking-widest uppercase text-orange-900">KHEM Website Master</p>
+        <p className="text-xs font-semibold tracking-widest uppercase text-[var(--ch-accent)]">KHEM Website Master</p>
         <h1 className="mt-1 text-3xl font-serif font-bold sm:text-4xl text-stone-950">
           Sitemap & Information Architecture Matrix
         </h1>

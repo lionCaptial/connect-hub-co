@@ -16,8 +16,8 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: GuidePageProps): Promise<Metadata> {
   const guide = getKnowledgeGuide((await params).slug);
   return guide
-    ? { title: `${guide.title} | Connect Hub Co.`, description: guide.description }
-    : { title: 'Knowledge Guide | Connect Hub Co.' };
+    ? { title: `${guide.title} | Holy Yatra`, description: guide.description }
+    : { title: 'Knowledge Guide | Holy Yatra' };
 }
 
 export default async function KnowledgeGuidePage({ params }: GuidePageProps) {
@@ -26,32 +26,32 @@ export default async function KnowledgeGuidePage({ params }: GuidePageProps) {
 
   return (
     <PublicHeroShell>
-      <main className="min-h-[70vh] bg-amber-50/60 px-6 py-14 text-stone-900">
+      <main className="min-h-[70vh] bg-[var(--ch-bg)] px-4 py-8 text-[var(--ch-ink)] sm:px-6 sm:py-14">
         <article className="mx-auto max-w-4xl">
-          <Link href="/knowledge-center" className="text-sm font-semibold text-[#087F8C] hover:underline">← Knowledge Center</Link>
-          <header className="mt-6 border-b border-amber-200 pb-8">
-            <p className="text-xs font-bold uppercase tracking-[0.18em] text-orange-800">Approved Knowledge Guide</p>
-            <h1 className="mt-2 font-serif text-4xl font-bold text-stone-950 sm:text-5xl">{guide.title}</h1>
-            <p className="mt-4 max-w-3xl text-lg leading-8 text-stone-700">{guide.description}</p>
+          <Link href="/knowledge-center" className="text-sm font-semibold text-[var(--ch-accent)] hover:underline">← Knowledge Center</Link>
+          <header className="mt-6 border-b border-[color:var(--ch-hairline)] pb-6 sm:pb-8">
+            <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--ch-accent)]">Approved Knowledge Guide</p>
+            <h1 className="mt-2 font-serif text-3xl font-bold text-[var(--ch-ink)] sm:text-5xl">{guide.title}</h1>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-[var(--ch-ink-muted)] sm:text-lg sm:leading-8">{guide.description}</p>
           </header>
 
-          <div className="mt-8 space-y-6">
+          <div className="mt-6 space-y-5 sm:mt-8 sm:space-y-6">
             {guide.articles.map((article) => (
-              <section key={article.id} className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-                <h2 className="font-serif text-2xl font-bold text-[#064E59]">{article.title}</h2>
-                <p className="mt-3 font-medium leading-7 text-stone-700">{article.summary}</p>
-                <p className="mt-3 leading-7 text-stone-600">{article.content}</p>
+              <section key={article.id} className="rounded-2xl border border-[color:var(--ch-hairline)] bg-[var(--ch-bg-elevated)] p-4 shadow-[var(--ch-shadow-soft)] sm:p-6">
+                <h2 className="font-serif text-xl font-bold text-[var(--ch-accent)] sm:text-2xl">{article.title}</h2>
+                <p className="mt-3 font-medium leading-7 text-[var(--ch-ink-muted)]">{article.summary}</p>
+                <p className="mt-3 leading-7 text-[var(--ch-ink-muted)]">{article.content}</p>
               </section>
             ))}
 
             {guide.approvedQuestions.length > 0 ? (
-              <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-                <h2 className="font-serif text-2xl font-bold text-[#064E59]">Approved Questions and Guidance</h2>
+              <section className="rounded-2xl border border-[color:var(--ch-hairline)] bg-[var(--ch-bg-elevated)] p-6 shadow-[var(--ch-shadow-soft)]">
+                <h2 className="font-serif text-2xl font-bold text-[var(--ch-accent)]">Approved Questions and Guidance</h2>
                 <div className="mt-4 divide-y divide-stone-200">
                   {guide.approvedQuestions.map((item) => (
                     <div key={item.id} className="py-4 first:pt-0 last:pb-0">
-                      <h3 className="font-semibold text-stone-900">{item.label}</h3>
-                      <p className="mt-2 leading-7 text-stone-600">{item.response}</p>
+                      <h3 className="font-semibold text-[var(--ch-ink)]">{item.label}</h3>
+                      <p className="mt-2 leading-7 text-[var(--ch-ink-muted)]">{item.response}</p>
                     </div>
                   ))}
                 </div>
@@ -59,13 +59,13 @@ export default async function KnowledgeGuidePage({ params }: GuidePageProps) {
             ) : null}
 
             {guide.faqs.length > 0 ? (
-              <section className="rounded-2xl border border-stone-200 bg-white p-6 shadow-sm">
-                <h2 className="font-serif text-2xl font-bold text-[#064E59]">Approved FAQs</h2>
+              <section className="rounded-2xl border border-[color:var(--ch-hairline)] bg-[var(--ch-bg-elevated)] p-6 shadow-[var(--ch-shadow-soft)]">
+                <h2 className="font-serif text-2xl font-bold text-[var(--ch-accent)]">Approved FAQs</h2>
                 <div className="mt-4 divide-y divide-stone-200">
                   {guide.faqs.map((faq) => (
                     <div key={faq.id} className="py-4 first:pt-0 last:pb-0">
-                      <h3 className="font-semibold text-stone-900">{faq.question}</h3>
-                      <p className="mt-2 leading-7 text-stone-600">{faq.answer}</p>
+                      <h3 className="font-semibold text-[var(--ch-ink)]">{faq.question}</h3>
+                      <p className="mt-2 leading-7 text-[var(--ch-ink-muted)]">{faq.answer}</p>
                     </div>
                   ))}
                 </div>
@@ -73,12 +73,12 @@ export default async function KnowledgeGuidePage({ params }: GuidePageProps) {
             ) : null}
           </div>
 
-          <aside className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-teal-200 bg-teal-50/70 p-5">
+          <aside className="mt-8 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-[color:var(--ch-hairline)] bg-[var(--ch-accent-soft)] p-5">
             <div>
-              <h2 className="font-serif text-xl font-bold text-[#064E59]">Ready for the next step?</h2>
-              <p className="mt-1 text-sm text-stone-600">Continue to the relevant official service or application page.</p>
+              <h2 className="font-serif text-xl font-bold text-[var(--ch-accent)]">Ready for the next step?</h2>
+              <p className="mt-1 text-sm text-[var(--ch-ink-muted)]">Continue to the relevant official service or application page.</p>
             </div>
-            <Link href={guide.action.href} className="rounded-full bg-[#087F8C] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#064E59]">{guide.action.label}</Link>
+            <Link href={guide.action.href} className="rounded-full bg-[var(--ch-bg-elevated)] px-5 py-2.5 text-sm font-bold text-[var(--ch-ink)] ring-1 ring-[color:var(--ch-hairline)] hover:brightness-[0.98]">{guide.action.label}</Link>
           </aside>
 
         </article>

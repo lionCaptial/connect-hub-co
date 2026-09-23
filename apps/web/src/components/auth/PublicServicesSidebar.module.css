@@ -107,6 +107,16 @@
   gap: 0.25rem;
 }
 
+.sectionHeading {
+  margin: 0;
+  padding: 0.2rem 0.45rem 0.35rem;
+  color: var(--ch-ink-muted);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
 .navItem {
   display: flex;
   align-items: center;
@@ -203,6 +213,62 @@
   background: color-mix(in srgb, var(--ch-gold) 45%, transparent);
 }
 
+.expandableGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.expandableSummary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.expandableSummary::-webkit-details-marker {
+  display: none;
+}
+
+.expandableChevron {
+  margin-left: auto;
+  color: var(--ch-ink-muted);
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.2s var(--ch-ease, ease);
+}
+
+.expandableGroup[open] .expandableChevron {
+  transform: rotate(180deg);
+}
+
+.expandableChildren {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin: 0.15rem 0 0.2rem 2.7rem;
+  padding-left: 0.55rem;
+  border-left: 1px solid color-mix(in srgb, var(--ch-gold) 45%, transparent);
+}
+
+.childNavItem {
+  border-radius: 6px;
+  padding: 0.35rem 0.4rem;
+  color: var(--ch-ink-muted);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-decoration: none;
+}
+
+.childNavItem:hover {
+  background: color-mix(in srgb, var(--ch-gold) 16%, transparent);
+  color: var(--ch-ink);
+}
+
+.childNavItem:focus-visible {
+  outline: 2px solid var(--ch-gold);
+  outline-offset: 1px;
+}
+
 .brandFooter {
   display: flex;
   flex-direction: column;
@@ -258,6 +324,7 @@
   .sidebar,
   .navItem,
   .toggleTab,
+  .expandableChevron,
   .drawerTrigger {
     transition: none;
   }

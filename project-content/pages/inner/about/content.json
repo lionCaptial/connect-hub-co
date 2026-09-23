@@ -10,12 +10,12 @@
         {
           "kind": "field:title",
           "line": 6,
-          "value": "About Us | Connect Hub Co."
+          "value": "About Us | Holy Yatra"
         },
         {
           "kind": "field:description",
           "line": 7,
-          "value": "Learn how Connect Hub Co. coordinates sacred services and pilgrim travel assistance in Gaya Ji and pan-India with Verified Priests."
+          "value": "Learn how Holy Yatra coordinates sacred services and pilgrim travel assistance in Gaya Ji and pan-India with Verified Priests."
         }
       ]
     },
@@ -56,7 +56,7 @@
         {
           "kind": "jsx-text",
           "line": 3,
-          "value": "About Connect Hub Co"
+          "value": "About Holy Yatra"
         },
         {
           "kind": "jsx-text",
@@ -86,7 +86,7 @@
         {
           "kind": "jsx-text",
           "line": 3,
-          "value": "Gaya is a deeply significant destination for ancestral rites. Connect Hub Co focuses on dependable local coordination while leaving ritual guidance and correctness with qualified Verified Priests."
+          "value": "Gaya is a deeply significant destination for ancestral rites. Holy Yatra focuses on dependable local coordination while leaving ritual guidance and correctness with qualified Verified Priests."
         },
         {
           "kind": "jsx-text",

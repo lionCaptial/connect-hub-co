@@ -89,6 +89,8 @@ model User {
 
   email String @unique
 
+  mobile String?
+
   password String
 
   role UserRole @default(CUSTOMER)

@@ -160,7 +160,7 @@ function PrivacyConnections() {
 
 export function OnlineAncestralPage() {
   return (
-    <BusinessPageFrame breadcrumb={[{ label: 'Connect Hub Co.', href: '/' }, { label: 'PitruMoksha Gaya', href: PITRU_MOKSHA_GAYA_ROUTE }, { label: 'Online' }]} className={styles.onlinePage} showBreadcrumb={false} showSidebar={false}>
+    <BusinessPageFrame breadcrumb={[{ label: 'Holy Yatra', href: '/' }, { label: 'PitruMoksha Gaya', href: PITRU_MOKSHA_GAYA_ROUTE }, { label: 'Online' }]} className={styles.onlinePage} showBreadcrumb={false}>
       <div className={styles.neonJourney}>
         <header className={styles.sharedPrivacyHeading}>
           <h1 id="online-page-title">Your personal story remains private.</h1>

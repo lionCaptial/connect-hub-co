@@ -66,5 +66,5 @@ ARCHIVE CONTENT: WPB-related navigation/business page source in two physical ZIP
 HISTORICAL GIT ONLY: no exact core manual; distributed files exist in f51/stash history
 
 STRONGEST GOVERNANCE SOURCE:
-C:\Projects\connect-hub-co-recovery-review\stash-49106b-source\apps\web\src\config\khem-navigation.config.ts
+C:\Projects\holy-yatra-recovery-review\stash-49106b-source\apps\web\src\config\khem-navigation.config.ts
 Git lineage: untracked stash object 49106b4053ec0d49e292c254e0fba4b3a27946be; consolidated in f51d9e8b.

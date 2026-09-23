@@ -1,5 +1,5 @@
 ﻿/**
- * CONNECT HUB CO. â€” KHEM NAVIGATION & VISUAL SHELL PROTECTED SOURCE OF TRUTH
+ * HOLY YATRA â€” KHEM NAVIGATION & VISUAL SHELL PROTECTED SOURCE OF TRUTH
  * 
  * LOCKED COMPONENT & NAVIGATION CONFIGURATION
  * DO NOT MODIFY WITHOUT EXPLICIT FOUNDER APPROVAL.
@@ -121,8 +121,9 @@ export const KHEM_FOOTER_NAVIGATION: readonly FooterColumn[] = Object.freeze([
     links: [
       ['About Us', '/about'] as const,
       ['Contact Us', '/contact'] as const,
-      ['Policies & Legal Terms', '/policies-legal-terms'] as const,
-      ['Refund Policy', '/refund-policy'] as const,
+      ['Privacy Policy', '/privacy-policy'] as const,
+      ['Booking Terms & Conditions', '/booking-terms'] as const,
+      ['Cancellation & Refund Policy', '/cancellation-policy'] as const,
     ],
   },
   {
@@ -170,10 +171,10 @@ export const KHEM_NAVIGATION_LOCK_SEAL = 'KHEM_FOUNDER_LOCK_SEAL_2026_PHASE_6A1'
  * 5. KHEM CHANGE REQUEST LOCK v1.0 â€” ARCHITECTURE RULES
  */
 export const KHEM_ARCHITECTURE_LOCK_V1 = Object.freeze({
-  rule1_sharedFooterSystem: 'Universal Shared Footer across all Heroes and business pages with 2-line Connect Hub Co. branding and Request Updates block.',
-  rule2_sidebarPrimaryNav: 'Sidebar is the permanent, fixed Primary Navigation for all 9 primary service modules.',
-  rule3_breadcrumbSecondaryNav: 'Breadcrumb is for location awareness only. Must always start with "Connect Hub Co." (linking to "/"), never "Home".',
-  rule4_navigationResponsibilities: 'Header = Brand & Global actions; Sidebar = Primary nav; Breadcrumb = Location awareness; Footer = Corporate/Support/Policies.',
+  rule1_sharedFooterSystem: 'Universal Shared Footer across all Heroes and business pages with 2-line Holy Yatra branding and Request Updates block.',
+  rule2_sidebarPrimaryNav: 'Header Our Services drawer is the sole public Primary Navigation for service modules. Persistent left sidebar is removed on public/account chrome.',
+  rule3_breadcrumbSecondaryNav: 'Breadcrumb is for location awareness only. Must always start with "Holy Yatra" (linking to "/"), never "Home".',
+  rule4_navigationResponsibilities: 'Header = Brand, Our Services (primary nav), and global actions; Breadcrumb = Location awareness; Footer = Corporate/Support/Policies. Internal ERP sidebar remains only on dashboard/admin shells.',
   rule5_protectionLock: 'KHEM ARCHITECTURE LOCK v1.0. Future changes require explicit Unlock -> Modify -> Founder Review -> Approval -> Re-freeze.',
 });
 

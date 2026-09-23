@@ -1,8 +1,8 @@
 # KHEM Pre-Trial Phase C — Authentication and Backend Contract Recovery
 
 Date: 2026-08-12  
-Canonical web application: `C:\Projects\connect-hub-co\apps\web`  
-Canonical surviving backend: `C:\Projects\connect-hub-co\backend`
+Canonical web application: `C:\Projects\holy-yatra\apps\web`  
+Canonical surviving backend: `C:\Projects\holy-yatra\backend`
 
 ## Executive result
 
@@ -16,7 +16,7 @@ The canonical session model is **SOURCE NOT ESTABLISHED**. Recovery evidence con
 
 | Field | Verified result |
 |---|---|
-| Backend project path | `C:\Projects\connect-hub-co\backend` |
+| Backend project path | `C:\Projects\holy-yatra\backend` |
 | Framework | Express 5, TypeScript, Prisma 6, PostgreSQL |
 | Start command | `npm run dev` → `ts-node-dev --respawn --transpile-only src/server.ts` |
 | Expected port | `5000`, fixed in `backend/src/server.ts` |

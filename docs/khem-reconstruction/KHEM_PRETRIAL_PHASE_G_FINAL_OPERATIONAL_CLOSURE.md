@@ -1,7 +1,7 @@
 # KHEM Pre-Trial Phase G — Final Operational Closure
 
 **Date:** 2026-08-13  
-**Project:** `C:\Projects\connect-hub-co`  
+**Project:** `C:\Projects\holy-yatra`  
 **Reference Document:** `docs/khem-reconstruction/KHEM_PRETRIAL_PHASE_F_AUTHORIZED_RUNTIME_ACCEPTANCE.md`
 
 ---
@@ -40,10 +40,10 @@ The Response DTO strips guest contact data (`guestPhone`, `guestEmail`), other p
 * **Partner deactivation:** Blocked (409 Conflict) if active assignments exist. Sets `status: "Inactive"` and corresponding `User.isActive: false`. Blocked partners cannot receive new assignments.
 
 ### G8: ERP Assignment UI
-Assigned partner selection is fully implemented in [`apps/web/src/app/requests/page.tsx`](file:///C:/Projects/connect-hub-co/apps/web/src/app/requests/page.tsx). It lists eligible verified partners, validates selection, submits assignments via `updateOperationalRequest`, and handles fetch errors cleanly without modifying the core dashboard layouts.
+Assigned partner selection is fully implemented in [`apps/web/src/app/requests/page.tsx`](file:///C:/Projects/holy-yatra/apps/web/src/app/requests/page.tsx). It lists eligible verified partners, validates selection, submits assignments via `updateOperationalRequest`, and handles fetch errors cleanly without modifying the core dashboard layouts.
 
 ### G9: Partner Completion UI
-Completed minimally via [`LimitedPartnerDashboard.tsx`](file:///C:/Projects/connect-hub-co/apps/web/src/components/dashboard/LimitedPartnerDashboard.tsx), restricting partners to assigned tasks and preventing any exposure to financials, refunds, or administrative tools.
+Completed minimally via [`LimitedPartnerDashboard.tsx`](file:///C:/Projects/holy-yatra/apps/web/src/components/dashboard/LimitedPartnerDashboard.tsx), restricting partners to assigned tasks and preventing any exposure to financials, refunds, or administrative tools.
 
 ### G10: Complaint Persistence
 Verified. Complaints are successfully persisted under the universal requests table using the `COMPLAINT` type. Confirms customer-safe acknowledgement and secure tracking boundaries.

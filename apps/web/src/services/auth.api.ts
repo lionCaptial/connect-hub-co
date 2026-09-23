@@ -6,6 +6,17 @@ interface BackendAuthUser {
   fullName: string;
   email: string;
   role: AuthUser["role"];
+  mobile?: string | null;
+}
+
+function mapBackendUser(user: BackendAuthUser): AuthUser {
+  return {
+    id: user.id,
+    name: user.fullName,
+    email: user.email,
+    role: user.role,
+    ...(user.mobile !== undefined ? { mobile: user.mobile } : {}),
+  };
 }
 
 interface BackendLoginResponse {
@@ -27,12 +38,7 @@ export async function login(input: LoginInput): Promise<{ user: AuthUser }> {
   persistAccessToken(response.token);
 
   return {
-    user: {
-      id: response.user.id,
-      name: response.user.fullName,
-      email: response.user.email,
-      role: response.user.role,
-    },
+    user: mapBackendUser(response.user),
   };
 }
 
@@ -55,11 +61,6 @@ export async function logout() {
 export async function getCurrentUser(): Promise<{ user: AuthUser }> {
   const response = await api<{ user: BackendAuthUser }>("/api/auth/me");
   return {
-    user: {
-      id: response.user.id,
-      name: response.user.fullName,
-      email: response.user.email,
-      role: response.user.role,
-    },
+    user: mapBackendUser(response.user),
   };
 }

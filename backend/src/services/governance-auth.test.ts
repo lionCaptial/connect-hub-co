@@ -5,8 +5,8 @@ import { prisma } from "../lib/prisma";
 import { optionalAuth, requireAuth, requireRoles, type AuthenticatedRequest, type AuthRole } from "../middleware/auth.middleware";
 
 const SECRET = "governance-test-secret";
-const ISSUER = "connect-hub-co-auth";
-const AUDIENCE = "connect-hub-co-api";
+const ISSUER = "holy-yatra-auth";
+const AUDIENCE = "holy-yatra-api";
 const ACTIVE_FOUNDER = { id: "founder-1", email: "founder@example.test", role: "FOUNDER" as const, isActive: true };
 
 function responseDouble() {

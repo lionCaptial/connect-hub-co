@@ -2,13 +2,13 @@ import type { Metadata } from 'next';
 import { BusinessPageShell, type BusinessPageShellProps } from '@/components/business-pages/BusinessPageShell';
 
 export const metadata: Metadata = {
-  title: 'Online Ritual Services & Remote Live Sankalp | Connect Hub Co.',
+  title: 'Online Ritual Services & Remote Live Sankalp | Holy Yatra',
   description: 'Participate remotely in authentic Vedic pujas with live HD video streaming and guided Sankalp led by Verified Priests.',
 };
 
 const onlineRitualData: BusinessPageShellProps = {
   breadcrumb: [
-    { label: 'Connect Hub Co.', href: '/' },
+    { label: 'Holy Yatra', href: '/' },
     { label: 'Ritual Services', href: '/ritual-services' },
     { label: 'Online Ritual Services' },
   ],

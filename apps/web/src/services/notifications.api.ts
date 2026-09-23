@@ -39,7 +39,7 @@ export function dispatchURMSNotification(
 
   let msg = customMessage || `Notification event ${eventType} triggered for reference ID ${record.referenceId}.`;
   if (eventType === 'REQUEST_SUBMITTED') {
-    msg = `Namaste ${record.guestName}, your request (Ref ID: ${record.referenceId}) has been received on Connect Hub Co.`;
+    msg = `Namaste ${record.guestName}, your request (Ref ID: ${record.referenceId}) has been received on Holy Yatra`;
   } else if (eventType === 'ASSIGNMENT') {
     msg = `Your request ${record.referenceId} has been assigned to ${record.assignedTeam || 'Operations'}.`;
   } else if (eventType === 'STATUS_CHANGED') {

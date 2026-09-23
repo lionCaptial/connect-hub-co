@@ -3,7 +3,7 @@ import { BusinessPageFrame } from "@/components/business-pages/BusinessPageShell
 import { PitruMokshaV15Page } from "./PitruMokshaV15Page";
 
 const breadcrumb = [
-  { label: "Connect Hub Co.", href: "/" },
+  { label: "Holy Yatra", href: "/" },
   { label: "PitruMoksha Gaya" },
 ] as const;
 

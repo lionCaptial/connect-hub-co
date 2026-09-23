@@ -1,27 +1,30 @@
 .rpnContent {
-  grid-column: 2;
+  grid-column: 1 / -1;
   display: grid;
   width: 100%;
   min-width: 0;
-  gap: 26px;
-  padding: 0 0 56px;
-  color: #153d42;
+  gap: 0;
+  padding: 0 0 var(--ch-section-y);
+  color: var(--ch-ink);
+  background: var(--ch-bg);
   box-sizing: border-box;
 }
 
 .masterStrip {
   display: flex;
   width: 100%;
-  height: 237px;
+  min-height: 237px;
   min-width: 0;
   margin: 0;
-  border: 1px solid rgba(8, 127, 140, 0.18);
-  border-radius: 18px;
-  padding: clamp(24px, 4vw, 48px);
-  padding-block: 24px;
-  background: linear-gradient(135deg, #3f1d2e, #6b3042);
-  color: #fff;
-  box-shadow: 0 14px 34px rgba(3, 47, 54, 0.08);
+  border: 0;
+  border-bottom: 1px solid color-mix(in srgb, #fff 22%, transparent);
+  border-radius: 0;
+  padding: var(--ch-section-y) var(--ch-section-x);
+  background:
+    var(--ch-band-wash),
+    linear-gradient(165deg, #0b2430 0%, var(--ch-accent) 72%, #123a4f 100%);
+  color: #f4f8fb;
+  box-shadow: none;
   overflow-wrap: anywhere;
   box-sizing: border-box;
   flex-direction: column;
@@ -31,7 +34,7 @@
 
 .masterStrip p {
   margin: 0;
-  color: #d4af37;
+  color: var(--ch-accent-soft);
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -39,8 +42,8 @@
 
 .masterStrip h1 {
   margin: 8px 0 16px;
-  color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  color: #f4f8fb;
+  font-family: var(--font-display), Georgia, serif;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   line-height: 1.08;
 }
@@ -57,28 +60,31 @@
   min-height: 38px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(212, 175, 55, 0.62);
-  border-radius: 9px;
+  border: 1px solid color-mix(in srgb, #fff 55%, transparent);
+  border-radius: 999px;
   padding: 8px 14px;
-  color: #fff;
+  color: #f4f8fb;
   font-size: calc(0.82rem + 4px);
   font-weight: 700;
   text-decoration: none;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.2s var(--ch-ease), color 0.2s var(--ch-ease), filter 0.15s var(--ch-ease);
 }
 
 .masterEntries a:hover,
 .masterEntries a:focus-visible {
-  background: rgba(212, 175, 55, 0.16);
+  background: color-mix(in srgb, #fff 12%, transparent);
 }
 
 .masterEntries .registrationEntry:active {
-  background: #d4af37;
-  color: #3f1d2e;
+  background: var(--ch-accent-soft);
+  color: var(--ch-ink);
 }
 
 .masterEntries .registrationEntry {
   transform: translateX(90px);
+  background: var(--ch-accent-soft);
+  border-color: transparent;
+  color: var(--ch-ink);
 }
 
 .masterEntries .aiEntry {
@@ -89,7 +95,7 @@
 }
 
 .masterEntries .aiEntry span {
-  color: #f4b942;
+  color: var(--ch-accent-soft);
   font-size: 1.75rem;
   line-height: 0.7;
 }
@@ -113,11 +119,12 @@
   width: 100%;
   min-width: 0;
   margin: 0;
-  border: 1px solid rgba(8, 127, 140, 0.18);
-  border-radius: 18px;
-  padding: clamp(24px, 4vw, 48px);
-  background: #fffdf8;
-  box-shadow: 0 14px 34px rgba(3, 47, 54, 0.08);
+  border: 0;
+  border-top: 1px solid var(--ch-hairline);
+  border-radius: 0;
+  padding: var(--ch-section-y) var(--ch-section-x);
+  background: var(--ch-bg);
+  box-shadow: none;
   overflow-wrap: anywhere;
   box-sizing: border-box;
 }
@@ -129,7 +136,7 @@
 .eyebrow,
 .section header > p {
   margin: 0;
-  color: var(--ritual-gold, #D4AF37);
+  color: var(--ch-accent);
   font-size: 0.76rem;
   font-weight: 900;
   letter-spacing: 0.18em;
@@ -138,9 +145,9 @@
 
 .section h2 {
   margin: 8px 0 0;
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: var(--font-display), Georgia, serif;
   font-size: clamp(2rem, 3vw, 3rem);
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .inquiry > div:first-child > span {
@@ -148,54 +155,61 @@
   max-width: 780px;
   margin-top: 12px;
   line-height: 1.65;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* Section 1 Box & Callout */
 .sectionBox {
-  border: 1px solid rgba(8, 127, 140, 0.25);
-  border-radius: 18px;
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
   padding: 36px;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(8, 127, 140, 0.05);
+  background: var(--ch-bg-elevated);
+  box-shadow: none;
 }
 
 .sectionGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
+  gap: 0;
   margin-top: 24px;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .sectionItem {
-  border-left: 3px solid var(--ritual-gold, #D4AF37);
-  padding-left: 18px;
+  border: 0;
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-left: 3px solid var(--ch-accent);
+  padding: 18px 18px 18px 18px;
+  background: var(--ch-bg-elevated);
 }
 
 .sectionItem h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .sectionItem p {
   margin: 8px 0 0;
   font-size: 0.92rem;
   line-height: 1.6;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
 .noticeAlert {
   margin-top: 28px;
-  border-radius: 14px;
+  border-radius: var(--ch-radius);
   padding: 20px 24px;
-  background: #fff9ee;
-  border: 1px solid rgba(180, 120, 0, 0.3);
-  color: #087F8C;
+  background:
+    var(--ch-band-wash),
+    var(--ch-bg-elevated);
+  border: 1px solid var(--ch-hairline);
+  color: var(--ch-ink);
 }
 
 .noticeAlert strong {
-  color: #b47800;
+  color: var(--ch-accent);
   display: block;
   margin-bottom: 6px;
   font-size: 1rem;
@@ -205,31 +219,35 @@
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.6;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* Section 2: Choose Your Partner Path (6 Cards) */
 .pathwayGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 0;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .pathwayCard {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  border: 1px solid rgba(8, 127, 140, 0.25);
-  border-radius: 16px;
+  border: 0;
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-radius: 0;
   padding: 26px 22px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(8, 127, 140, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--ch-bg-elevated);
+  box-shadow: none;
+  transition: background 0.2s var(--ch-ease);
 }
 
 .pathwayCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(8, 127, 140, 0.1);
+  transform: none;
+  box-shadow: none;
+  background: color-mix(in srgb, var(--ch-accent-soft) 55%, var(--ch-bg-elevated));
 }
 
 .pathwayCard > span {
@@ -237,9 +255,9 @@
   width: 46px;
   height: 46px;
   place-items: center;
-  border-radius: 12px;
-  background: #087F8C;
-  color: var(--ritual-gold, #D4AF37);
+  border-radius: var(--ch-radius);
+  background: var(--ch-accent);
+  color: var(--ch-accent-soft);
   flex-shrink: 0;
 }
 
@@ -251,7 +269,7 @@
 .pathwayCard h3 {
   margin: 16px 0 0;
   font-size: 1.15rem;
-  color: #087F8C;
+  color: var(--ch-ink);
   line-height: 1.3;
 }
 
@@ -259,55 +277,62 @@
   display: block;
   margin-top: 4px;
   font-size: 0.85rem;
-  color: #b47800;
+  color: var(--ch-accent);
 }
 
 .pathwayCard p {
   margin: 10px 0 0;
   font-size: 0.9rem;
   line-height: 1.58;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
   flex-grow: 1;
 }
 
 .pathwayCard a {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 20px;
-  border-radius: 10px;
+  border-radius: 999px;
   padding: 10px 16px;
-  background: #087F8C;
-  color: #fff;
+  background: var(--ch-accent-soft);
+  color: var(--ch-ink);
   font-weight: 800;
   font-size: 0.88rem;
   text-decoration: none;
   text-align: center;
-  transition: background 0.2s ease;
+  transition: filter 0.15s var(--ch-ease);
 }
 
 .pathwayCard a:hover {
-  background: #066671;
+  background: var(--ch-accent-soft);
+  filter: brightness(0.97);
 }
 
-/* Benefits Grid */
 .benefitsGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 0;
   margin-top: 24px;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .benefitCard {
-  border: 1px solid rgba(8, 127, 140, 0.25);
-  border-radius: 16px;
+  border: 0;
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-radius: 0;
   padding: 24px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(8, 127, 140, 0.04);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: var(--ch-bg-elevated);
+  box-shadow: none;
+  transition: background 0.2s var(--ch-ease);
 }
 
 .benefitCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(8, 127, 140, 0.1);
+  transform: none;
+  box-shadow: none;
+  background: color-mix(in srgb, var(--ch-accent-soft) 55%, var(--ch-bg-elevated));
 }
 
 .benefitCard > span {
@@ -315,9 +340,9 @@
   width: 46px;
   height: 46px;
   place-items: center;
-  border-radius: 12px;
-  background: #087F8C;
-  color: var(--ritual-gold, #D4AF37);
+  border-radius: var(--ch-radius);
+  background: var(--ch-accent);
+  color: var(--ch-accent-soft);
 }
 
 .benefitCard svg {
@@ -328,42 +353,47 @@
 .benefitCard h3 {
   margin: 16px 0 0;
   font-size: 1.12rem;
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .benefitCard p {
   margin: 8px 0 0;
   font-size: 0.9rem;
   line-height: 1.58;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* Eligibility & Expectations Section */
 .eligibilitySection {
-  background: #fff9ee;
-  border-top: 1px solid rgba(8, 127, 140, 0.15);
-  border-bottom: 1px solid rgba(8, 127, 140, 0.15);
+  background:
+    var(--ch-band-wash),
+    var(--ch-bg-elevated);
+  border-top: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
 }
 
 .eligibilityGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
+  gap: 0;
   margin-top: 24px;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .eligibilityCard {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  border: 1px solid rgba(8, 127, 140, 0.25);
-  border-radius: 14px;
+  border: 0;
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-radius: 0;
   padding: 20px;
-  background: #fff;
+  background: var(--ch-bg-elevated);
 }
 
 .eligibilityCard svg {
-  color: #b47800;
+  color: var(--ch-accent);
   width: 24px;
   height: 24px;
   flex: 0 0 auto;
@@ -373,40 +403,43 @@
 .eligibilityCard h3 {
   margin: 0;
   font-size: 1.05rem;
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .eligibilityCard p {
   margin: 6px 0 0;
   font-size: 0.88rem;
   line-height: 1.55;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* Section 6: Checklist Grid */
 .reqSection {
-  background: #fff;
+  background: var(--ch-bg);
 }
 
 .reqGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 0;
   margin-top: 24px;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .reqCard {
   display: flex;
   align-items: flex-start;
   gap: 12px;
-  border: 1px solid rgba(8, 127, 140, 0.22);
-  border-radius: 14px;
+  border: 0;
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-radius: 0;
   padding: 18px;
-  background: #fff9ee;
+  background: var(--ch-bg-elevated);
 }
 
 .reqCard svg {
-  color: #b47800;
+  color: var(--ch-accent);
   width: 22px;
   height: 22px;
   flex: 0 0 auto;
@@ -416,42 +449,47 @@
 .reqCard h3 {
   margin: 0;
   font-size: 0.98rem;
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .reqCard p {
   margin: 4px 0 0;
   font-size: 0.85rem;
   line-height: 1.48;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* Section 7: Verification and Onboarding Section */
 .verificationSection {
-  background: #fff9ee;
-  border-top: 1px solid rgba(8, 127, 140, 0.15);
-  border-bottom: 1px solid rgba(8, 127, 140, 0.15);
+  background:
+    var(--ch-band-wash),
+    var(--ch-bg-elevated);
+  border-top: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
 }
 
 .verificationGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
+  gap: 0;
   margin-top: 24px;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .verificationCard {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  border: 1px solid rgba(8, 127, 140, 0.25);
-  border-radius: 14px;
+  border: 0;
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-radius: 0;
   padding: 22px;
-  background: #fff;
+  background: var(--ch-bg-elevated);
 }
 
 .verificationCard svg {
-  color: #087F8C;
+  color: var(--ch-accent);
   width: 24px;
   height: 24px;
   flex: 0 0 auto;
@@ -461,42 +499,47 @@
 .verificationCard h3 {
   margin: 0;
   font-size: 1.08rem;
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .verificationCard p {
   margin: 6px 0 0;
   font-size: 0.9rem;
   line-height: 1.58;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* Section 10: Knowledge Centre Preview */
 .knowledgeSection {
-  background: #fff9ee;
-  border-top: 1px solid rgba(8, 127, 140, 0.15);
-  border-bottom: 1px solid rgba(8, 127, 140, 0.15);
+  background:
+    var(--ch-band-wash),
+    var(--ch-bg-elevated);
+  border-top: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
 }
 
 .knowledgeGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 0;
   margin-top: 24px;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .knowledgeCard {
-  border: 1px solid rgba(8, 127, 140, 0.25);
-  border-radius: 16px;
+  border: 0;
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-radius: 0;
   padding: 22px;
-  background: #fff;
-  box-shadow: 0 2px 10px rgba(8, 127, 140, 0.04);
+  background: var(--ch-bg-elevated);
+  box-shadow: none;
 }
 
 .knowledgeCard h3 {
   margin: 0;
   font-size: 1.05rem;
-  color: #087F8C;
+  color: var(--ch-ink);
   line-height: 1.35;
 }
 
@@ -504,57 +547,64 @@
   margin: 8px 0 0;
   font-size: 0.88rem;
   line-height: 1.55;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* Categories Grid */
 .categoriesGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 0;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .categoryCard {
-  border: 1px solid rgba(8, 127, 140, 0.22);
-  border-radius: 16px;
+  border: 0;
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-radius: 0;
   padding: 24px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(8, 127, 140, 0.03);
+  background: var(--ch-bg-elevated);
+  box-shadow: none;
 }
 
 .categoryCard h3 {
   margin: 0;
   font-size: 1.1rem;
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .categoryCard p {
   margin: 8px 0 0;
   font-size: 0.9rem;
   line-height: 1.55;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* Process Section */
 .stepsGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
+  gap: 0;
   margin: 0;
   padding: 0;
   list-style: none;
+  border-top: 1px solid var(--ch-hairline);
+  border-left: 1px solid var(--ch-hairline);
 }
 
 .stepsGrid li {
-  border-top: 4px solid var(--ritual-gold, #D4AF37);
-  border-radius: 14px;
+  border: 0;
+  border-top: 3px solid var(--ch-accent-soft);
+  border-right: 1px solid var(--ch-hairline);
+  border-bottom: 1px solid var(--ch-hairline);
+  border-radius: 0;
   padding: 22px;
-  background: #087F8C;
-  color: #fff;
+  background: var(--ch-accent);
+  color: #f4f8fb;
 }
 
 .stepsGrid li > span {
-  color: var(--ritual-gold, #D4AF37);
+  color: var(--ch-accent-soft);
   font-weight: 900;
   font-size: 1.2rem;
 }
@@ -562,23 +612,22 @@
 .stepsGrid h3 {
   margin: 10px 0 0;
   font-size: 1.05rem;
-  color: #fff;
+  color: #f4f8fb;
 }
 
 .stepsGrid p {
   margin: 8px 0 0;
   font-size: 0.88rem;
   line-height: 1.55;
-  color: rgba(255, 255, 255, 0.9);
+  color: color-mix(in srgb, #f4f8fb 90%, transparent);
 }
 
-/* Standards Box */
 .standardsBox {
-  border: 1px solid rgba(8, 127, 140, 0.25);
-  border-radius: 18px;
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
   padding: 36px;
-  background: #fff;
-  box-shadow: 0 4px 16px rgba(8, 127, 140, 0.05);
+  background: var(--ch-bg-elevated);
+  box-shadow: none;
 }
 
 .standardsGrid {
@@ -589,69 +638,70 @@
 }
 
 .standardItem {
-  border-left: 3px solid var(--ritual-gold, #D4AF37);
+  border-left: 3px solid var(--ch-accent);
   padding-left: 18px;
 }
 
 .standardItem h3 {
   margin: 0;
   font-size: 1.08rem;
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .standardItem p {
   margin: 6px 0 0;
   font-size: 0.9rem;
   line-height: 1.58;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
 }
 
-/* FAQs */
 .faqs {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
+  gap: 0.75rem;
 }
 
 .faqs details {
-  border: 1px solid rgba(8, 127, 140, 0.25);
-  border-radius: 14px;
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
   padding: 20px;
-  background: #fff;
+  background: var(--ch-bg-elevated);
 }
 
 .faqs summary {
   cursor: pointer;
   font-weight: 800;
-  color: #087F8C;
+  color: var(--ch-ink);
   font-size: 1.02rem;
 }
 
 .faqs p {
   margin: 12px 0 0;
   line-height: 1.6;
-  color: #4a5568;
+  color: var(--ch-ink-muted);
   font-size: 0.92rem;
 }
 
-/* Inquiry Section */
 .inquiry {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 38px;
   scroll-margin-top: 24px;
-  padding: 48px;
-  background: #087F8C;
-  color: #fff;
-  border-radius: 20px;
-  margin: 0 48px 48px;
+  padding: var(--ch-section-y) var(--ch-section-x);
+  background:
+    var(--ch-band-wash),
+    var(--ch-bg-elevated);
+  color: var(--ch-ink);
+  border-radius: 0;
+  margin: 0;
+  border-top: 1px solid var(--ch-hairline);
 }
 
 .inquiry h2 {
   margin: 8px 0 0;
-  color: #fff;
-  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ch-ink);
+  font-family: var(--font-display), Georgia, serif;
   font-size: clamp(2rem, 3vw, 3rem);
 }
 
@@ -663,31 +713,31 @@
 }
 
 .inquiryActions a {
-  border-radius: 12px;
+  border-radius: 999px;
   padding: 12px 20px;
-  background: var(--ritual-gold, #D4AF37);
-  color: #087F8C;
+  background: var(--ch-accent-soft);
+  color: var(--ch-ink);
   font-weight: 900;
   text-decoration: none;
 }
 
 .inquiryActions a:last-child {
-  border: 1px solid #fff;
+  border: 1px solid var(--ch-hairline);
   background: transparent;
-  color: #fff;
+  color: var(--ch-accent);
 }
 
-/* Related Navigation */
 .related {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 48px;
-  border-top: 1px solid rgba(8, 127, 140, 0.2);
+  padding: 25px var(--ch-section-x);
+  border-top: 1px solid var(--ch-hairline);
+  background: var(--ch-bg);
 }
 
 .related strong {
-  color: #087F8C;
+  color: var(--ch-ink);
 }
 
 .related > div {
@@ -698,27 +748,27 @@
 }
 
 .related a {
-  border: 1px solid rgba(8, 127, 140, 0.3);
+  border: 1px solid var(--ch-hairline);
   border-radius: 999px;
   padding: 9px 16px;
   font-weight: 700;
-  color: #087F8C;
+  color: var(--ch-accent);
   text-decoration: none;
   font-size: 0.88rem;
-  transition: background 0.2s ease;
+  background: var(--ch-bg-elevated);
+  transition: background 0.2s var(--ch-ease);
 }
 
 .related a:hover {
-  background: rgba(8, 127, 140, 0.08);
+  background: var(--ch-accent-soft);
 }
 
 .rpnContent a:focus-visible,
 .rpnContent summary:focus-visible {
-  outline: 3px solid var(--ritual-gold, #D4AF37);
+  outline: var(--ch-focus-ring);
   outline-offset: 3px;
 }
 
-/* Responsive Styles */
 @media (max-width: 1200px) {
   .benefitsGrid,
   .reqGrid,
@@ -738,7 +788,7 @@
 
 @media (max-width: 900px) {
   .section {
-    padding: 48px 34px;
+    padding: var(--ch-section-y) var(--ch-section-x);
   }
   .sectionGrid,
   .pathwayGrid,
@@ -755,7 +805,7 @@
   .related {
     align-items: flex-start;
     flex-direction: column;
-    padding: 40px 34px;
+    padding: var(--ch-section-y) var(--ch-section-x);
   }
   .related > div {
     justify-content: flex-start;
@@ -763,15 +813,19 @@
 }
 
 @media (max-width: 600px) {
+  .masterStrip {
+    min-height: 0;
+    padding: 2rem var(--ch-section-x);
+  }
   .section {
-    padding: 42px 22px;
+    padding: var(--ch-section-y) var(--ch-section-x);
   }
   .stepsGrid,
   .faqs {
     grid-template-columns: 1fr;
   }
   .inquiry {
-    padding: 32px 20px;
+    padding: var(--ch-section-y) var(--ch-section-x);
   }
   .inquiryActions {
     align-items: stretch;

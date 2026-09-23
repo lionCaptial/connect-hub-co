@@ -46,7 +46,7 @@ export function LegacyVerifyEmailPage() {
     <main className="grid min-h-screen place-items-center bg-stone-50 p-6">
       <div className="w-full max-w-md rounded-2xl border border-teal-900/20 bg-white p-8 shadow-lg text-center">
         <span className="text-xs font-black uppercase tracking-widest text-amber-600">
-          CONNECT HUB CO.
+          HOLY YATRA
         </span>
         <h1 className="mt-1 font-serif text-3xl text-teal-800">Email Verification</h1>
 

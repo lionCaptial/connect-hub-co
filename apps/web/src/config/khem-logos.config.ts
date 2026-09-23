@@ -1,7 +1,7 @@
 /**
- * CONNECT HUB CO. — PROTECTED LOGO GOVERNANCE SYSTEM
+ * HOLY YATRA — PROTECTED LOGO GOVERNANCE SYSTEM
  * 
- * LOGO THREE: Master Company Logo (Green-and-Gold Connect Hub Co. emblem)
+ * LOGO THREE: Master Company Logo (Green-and-Gold Holy Yatra emblem)
  * Used in Header, Footer, and Hero Master Cards.
  * 
  * LOGO TWO: Golden Flower Decorative Mark

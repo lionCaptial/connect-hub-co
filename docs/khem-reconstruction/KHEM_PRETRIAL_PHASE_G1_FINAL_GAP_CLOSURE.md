@@ -1,7 +1,7 @@
 # KHEM Pre-Trial Phase G.1 — Final Gap Closure
 
 **Date:** 2026-08-13  
-**Project:** `C:\Projects\connect-hub-co`  
+**Project:** `C:\Projects\holy-yatra`  
 **Status:** Verification Complete & Locked  
 
 ---
@@ -16,7 +16,7 @@ This document captures the final gap closure outcomes of Phase G.1, verifying th
 
 ### G1-A: URMS Test Suite Validation
 * **Status:** **5/5 PASS**
-* **Verification Detail:** All tests in [`urms.test.ts`](file:///C:/Projects/connect-hub-co/apps/web/src/__tests__/urms.test.ts) pass natively against the running backend on port 5000.
+* **Verification Detail:** All tests in [`urms.test.ts`](file:///C:/Projects/holy-yatra/apps/web/src/__tests__/urms.test.ts) pass natively against the running backend on port 5000.
 * **Authentication Method:** Implemented a self-contained, pure JS JWT signature utility using Node's standard `crypto` module, signing test tokens with the active database `JWT_SECRET` retrieved from `backend/.env`.
 
 ### G1-B: Role-Specific Runtime Acceptance

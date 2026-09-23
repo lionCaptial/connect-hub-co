@@ -30,7 +30,7 @@ export function CustomerDashboard() {
             <span className="text-xl font-bold text-amber-400"></span>
             <div>
               <h1 className="font-serif text-xl font-bold tracking-wide text-white">
-                Connect Hub Co. <span className="text-amber-300 font-sans text-xs font-normal">CUSTOMER PORTAL</span>
+                Holy Yatra <span className="text-amber-300 font-sans text-xs font-normal">CUSTOMER PORTAL</span>
               </h1>
               <p className="text-[11px] text-teal-200">
                 Sacred Rituals, Ancestral Coordination & Travel Assistance

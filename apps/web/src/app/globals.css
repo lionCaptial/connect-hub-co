@@ -4,15 +4,17 @@
 :root {
   --background: var(--ch-bg);
   --foreground: var(--ch-ink);
-  --shell-peacock-top: #043d45;
-  --shell-peacock: #087f8c;
-  --shell-peacock-bottom: #032e35;
-  --royal-navy: #0c192c;
+  /* Legacy shell names → home cool peacock system */
+  --shell-peacock-top: #0b1f33;
+  --shell-peacock: var(--ch-accent);
+  --shell-peacock-bottom: #072536;
+  --royal-navy: var(--ch-ink);
   --ritual-gold: var(--ch-gold-soft);
-  --gold-bright: #c9a227;
-  --border-soft: color-mix(in srgb, var(--ch-gold) 35%, transparent);
+  --gold-bright: var(--ch-gold-soft);
+  --border-soft: var(--ch-hairline);
   --text-on-peacock: #ffffff;
   --warm-ivory-soft: var(--ch-bg-elevated);
+  --sidebar-active: color-mix(in srgb, var(--ch-accent) 72%, white);
 }
 
 @theme inline {
@@ -26,4 +28,5 @@ body {
   background: var(--ch-bg);
   color: var(--ch-ink);
   font-family: var(--font-body), system-ui, sans-serif;
+  overflow-x: clip;
 }

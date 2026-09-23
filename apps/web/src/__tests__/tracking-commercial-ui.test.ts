@@ -87,7 +87,7 @@ assert(!source.includes('remarks.length} / 1,000'), 'Payment remarks counter mus
 assert(!source.includes('type="file"'), 'No payment proof or document upload may exist');
 assert(!source.includes('>External Payment<'), 'Customer-facing UI must not render External Payment wording');
 assert(source.includes("EXTERNAL_PAYMENT: 'Payment Confirmation'"), 'Progress strip must say Payment Confirmation');
-for (const removedCsaSection of ['Customer Responsibilities', 'Connect Hub Co. Responsibilities', 'Important Service Disclosures']) {
+for (const removedCsaSection of ['Customer Responsibilities', 'Holy Yatra Responsibilities', 'Important Service Disclosures']) {
   assert(!source.includes(removedCsaSection), `CSA must not render ${removedCsaSection}`);
 }
 for (const retainedCsaField of ['Agreed Scope', 'Inclusions', 'Final Agreed Price']) {
@@ -95,10 +95,10 @@ for (const retainedCsaField of ['Agreed Scope', 'Inclusions', 'Final Agreed Pric
 }
 assert(source.includes('lg:grid-cols-2'), 'CSA and payment must use two columns on desktop');
 assert(source.includes('lg:border-l lg:border-t-0'), 'Desktop payment column must have a vertical divider that becomes horizontal when stacked');
-assert(source.includes('bg-amber-50/40'), 'Quotation must retain a pale-gold section identity');
-assert(source.includes('bg-cyan-50/30'), 'CSA must retain a light ice/peacock section identity');
-assert(source.includes('bg-violet-50/40'), 'Booking must retain a light lavender section identity');
-assert(source.includes('Booking will be confirmed after payment verification by Connect Hub Co.'));
+assert(source.includes('bg-[var(--ch-accent-soft)]/50'), 'Quotation must use soft accent section identity');
+assert(source.includes('bg-[var(--ch-bg)]'), 'CSA must use cool ice page section identity');
+assert(source.includes('bg-[var(--ch-bg-elevated)]'), 'Booking must use elevated cool section identity');
+assert(source.includes('Booking will be confirmed after payment verification by Holy Yatra'));
 
 const originalFetch = globalThis.fetch;
 const requests: Array<{ url: string; body: Record<string, unknown> }> = [];

@@ -3,8 +3,9 @@ import { PublicHeroShell } from '@/features/public-shell';
 import { BusinessAbout } from '@/components/common/BusinessAbout';
 
 export const metadata: Metadata = {
-  title: 'About Us | Connect Hub Co.',
-  description: 'Learn how Connect Hub Co. coordinates sacred services and pilgrim travel assistance in Gaya Ji and pan-India with Verified Priests.',
+  title: 'About Us | Holy Yatra',
+  description:
+    'Holy Yatra creates premium operational services that bring tradition, lawful processes, specialist expertise and professional execution together for families who value authenticity, privacy and personal attention.',
 };
 
 export default function AboutPage() {

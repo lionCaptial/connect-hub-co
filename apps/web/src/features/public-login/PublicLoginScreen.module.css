@@ -1,0 +1,270 @@
+.page {
+  min-height: 100dvh;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background:
+    var(--ch-band-wash),
+    var(--ch-bg);
+  color: var(--ch-ink);
+}
+
+.leftColumn {
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  border-right: 1px solid var(--ch-hairline);
+  background: color-mix(in srgb, var(--ch-bg-elevated) 82%, var(--ch-accent-soft));
+  display: grid;
+  align-content: start;
+  gap: 1.25rem;
+}
+
+.leftHeader {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.brandName {
+  margin: 0;
+  color: var(--ch-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: var(--ch-ink);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 650;
+  line-height: 1.22;
+}
+
+.trustList {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.trustItem h2 {
+  margin: 0;
+  color: var(--ch-ink);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.trustItem p {
+  margin: 0.32rem 0 0;
+  color: var(--ch-ink-muted);
+  font-size: 0.93rem;
+  line-height: 1.45;
+}
+
+.trustItem a {
+  color: var(--ch-accent);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.trustItem a:hover {
+  text-decoration: underline;
+}
+
+.supportText {
+  color: var(--ch-ink-muted);
+  font-size: 0.83rem;
+}
+
+.journeyLinks {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.backHome {
+  justify-self: start;
+  margin-top: 0.35rem;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid var(--ch-hairline);
+  color: var(--ch-accent);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.86rem;
+  background: var(--ch-bg-elevated);
+}
+
+.backHome:hover {
+  background: var(--ch-accent-soft);
+}
+
+.authColumn {
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 3vw, 2.4rem);
+}
+
+.authPanel {
+  width: min(100%, 31rem);
+  background: var(--ch-bg-elevated);
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
+  padding: clamp(1rem, 3vw, 1.8rem);
+  box-shadow: var(--ch-shadow-soft);
+}
+
+.brandMarkWrap {
+  display: flex;
+  justify-content: center;
+}
+
+.authHeading {
+  margin: 0.65rem 0 0;
+  text-align: center;
+  color: var(--ch-ink);
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 1.32rem;
+  font-weight: 650;
+}
+
+.notice,
+.success,
+.error {
+  margin-top: 0.8rem;
+  border-radius: var(--ch-radius);
+  padding: 0.62rem 0.72rem;
+  font-size: 0.83rem;
+  line-height: 1.35;
+}
+
+.notice {
+  border: 1px solid var(--ch-hairline);
+  background: var(--ch-accent-soft);
+  color: var(--ch-ink);
+}
+
+.success {
+  border: 1px solid color-mix(in srgb, #1d5c2a 28%, transparent);
+  background: #edf9f0;
+  color: #1d5c2a;
+}
+
+.error {
+  border: 1px solid color-mix(in srgb, #8f1d25 28%, transparent);
+  background: #fff2f2;
+  color: #8f1d25;
+}
+
+.form {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.68rem;
+}
+
+.modeLabel {
+  margin: 0.1rem 0;
+  color: var(--ch-accent);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.label {
+  display: grid;
+  gap: 0.32rem;
+  color: var(--ch-ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid var(--ch-hairline);
+  border-radius: var(--ch-radius);
+  padding: 0.65rem 0.7rem;
+  font-size: 0.93rem;
+  color: var(--ch-ink);
+  background: var(--ch-bg);
+  outline: none;
+  transition: border-color 130ms var(--ch-ease), box-shadow 130ms var(--ch-ease);
+}
+
+.input:focus {
+  border-color: var(--ch-accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ch-accent) 18%, transparent);
+}
+
+.primaryButton {
+  margin-top: 0.5rem;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.72rem 0.9rem;
+  background: var(--ch-accent-soft);
+  color: var(--ch-ink);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: filter 130ms var(--ch-ease);
+}
+
+.primaryButton:hover {
+  filter: brightness(1.04);
+}
+
+.primaryButton:disabled {
+  cursor: default;
+  opacity: 0.62;
+}
+
+.modeSwitch {
+  margin: 0.2rem 0 0;
+  color: var(--ch-ink-muted);
+  font-size: 0.81rem;
+}
+
+.inlineButton {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--ch-accent);
+  font-size: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.privacyLine {
+  margin: 1.1rem 0 0;
+  padding-top: 0.95rem;
+  border-top: 1px solid var(--ch-hairline);
+  color: var(--ch-ink-muted);
+  text-align: center;
+  font-size: 0.76rem;
+  line-height: 1.42;
+}
+
+@media (max-width: 980px) {
+  .page {
+    grid-template-columns: 1fr;
+  }
+
+  .leftColumn {
+    border-right: 0;
+    border-bottom: 1px solid var(--ch-hairline);
+    padding: 1.25rem 1rem;
+  }
+
+  .authColumn {
+    padding: 1rem;
+  }
+
+  .authPanel {
+    width: 100%;
+    border-radius: var(--ch-radius);
+  }
+
+  .primaryButton {
+    min-height: 2.85rem;
+  }
+}

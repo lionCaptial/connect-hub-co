@@ -1,8 +1,9 @@
 "use client";
 
-import { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { getCurrentUser, login as loginRequest, logout as logoutRequest, register as registerRequest } from "@/services/auth.api";
+import { PUBLIC_SESSION, loginSessionEndedHref } from "@/config/publicSession";
 import { AuthUser, LoginInput, RegisterInput } from "@/types/auth";
 
 interface AuthContextValue {
@@ -24,6 +25,7 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [user, setUser] = useState<AuthUser | null>(null);
   const [loading, setLoading] = useState(true);
+  const isSessionExpiringRef = useRef(false);
 
   const isInternalERPRoute =
     pathname === "/dashboard" ||
@@ -57,21 +59,78 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     if (!loading && user && (pathname === "/login" || pathname === "/register")) router.replace("/");
   }, [isPublic, loading, pathname, router, user]);
 
+  const clearPublicSessionTimestamps = useCallback(() => {
+    sessionStorage.removeItem(PUBLIC_SESSION.storageKeyAbsolute);
+    sessionStorage.removeItem(PUBLIC_SESSION.storageKeyLastActivity);
+  }, []);
+
+  const setPublicSessionTimestamps = useCallback((at: number) => {
+    sessionStorage.setItem(PUBLIC_SESSION.storageKeyAbsolute, String(at));
+    sessionStorage.setItem(PUBLIC_SESSION.storageKeyLastActivity, String(at));
+  }, []);
+
+  const expirePublicSession = useCallback(async () => {
+    if (isSessionExpiringRef.current) return;
+    isSessionExpiringRef.current = true;
+    try {
+      await logoutRequest();
+    } finally {
+      clearPublicSessionTimestamps();
+      setUser(null);
+      if (!pathname.startsWith("/login")) router.replace(loginSessionEndedHref());
+      isSessionExpiringRef.current = false;
+    }
+  }, [clearPublicSessionTimestamps, pathname, router]);
+
+  useEffect(() => {
+    if (!user) return;
+
+    const now = Date.now();
+    const absoluteStartedAt = sessionStorage.getItem(PUBLIC_SESSION.storageKeyAbsolute);
+    if (!absoluteStartedAt) sessionStorage.setItem(PUBLIC_SESSION.storageKeyAbsolute, String(now));
+    sessionStorage.setItem(PUBLIC_SESSION.storageKeyLastActivity, String(now));
+
+    const bumpActivity = () => {
+      sessionStorage.setItem(PUBLIC_SESSION.storageKeyLastActivity, String(Date.now()));
+    };
+    const activityEvents: ReadonlyArray<keyof WindowEventMap> = ["pointerdown", "keydown", "scroll", "touchstart"];
+    const activityListenerOptions: AddEventListenerOptions = { passive: true };
+    activityEvents.forEach((eventName) => window.addEventListener(eventName, bumpActivity, activityListenerOptions));
+
+    const timerId = window.setInterval(() => {
+      const currentTime = Date.now();
+      const absoluteTimestamp = Number(sessionStorage.getItem(PUBLIC_SESSION.storageKeyAbsolute) || 0);
+      const lastActivityTimestamp = Number(sessionStorage.getItem(PUBLIC_SESSION.storageKeyLastActivity) || 0);
+      const idleExpired = currentTime - lastActivityTimestamp >= PUBLIC_SESSION.idleMs;
+      const absoluteExpired = currentTime - absoluteTimestamp >= PUBLIC_SESSION.absoluteMs;
+      if (idleExpired || absoluteExpired) void expirePublicSession();
+    }, 15_000);
+
+    return () => {
+      activityEvents.forEach((eventName) => window.removeEventListener(eventName, bumpActivity));
+      window.clearInterval(timerId);
+    };
+  }, [expirePublicSession, user]);
+
   const login = useCallback(async (input: LoginInput) => {
     const response = await loginRequest(input);
     setUser(response.user);
+    setPublicSessionTimestamps(Date.now());
     router.replace("/");
-  }, [router]);
+  }, [router, setPublicSessionTimestamps]);
 
   const logout = useCallback(async () => {
     try { await logoutRequest(); }
-    finally { setUser(null); router.replace("/"); }
-  }, [router]);
+    finally {
+      clearPublicSessionTimestamps();
+      setUser(null);
+      router.replace("/");
+    }
+  }, [clearPublicSessionTimestamps, router]);
 
   const register = useCallback(async (input: RegisterInput) => {
     await registerRequest(input);
-    router.replace("/login?registered=1");
-  }, [router]);
+  }, []);
 
   const hasRole = useCallback((role: AuthUser["role"] | AuthUser["role"][]) => {
     if (Array.isArray(role)) return user ? role.includes(user.role) : false;

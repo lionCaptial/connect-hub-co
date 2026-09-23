@@ -5,6 +5,7 @@ export interface AuthUser {
   name: string;
   email: string;
   role: UserRole;
+  mobile?: string | null;
 }
 
 export interface LoginInput {
@@ -16,4 +17,5 @@ export interface RegisterInput {
   fullName: string;
   email: string;
   password: string;
+  mobile?: string;
 }

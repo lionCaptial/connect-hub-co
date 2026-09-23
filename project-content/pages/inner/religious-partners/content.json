@@ -10,12 +10,12 @@
         {
           "kind": "field:title",
           "line": 6,
-          "value": "Verified Priest Network | Connect Hub Co."
+          "value": "Verified Priest Network | Holy Yatra"
         },
         {
           "kind": "field:description",
           "line": 8,
-          "value": "Join a trusted network of verified religious service professionals. Register with Connect Hub Co. to connect with seeking families across India and worldwide."
+          "value": "Join a trusted network of verified religious service professionals. Register with Holy Yatra to connect with seeking families across India and worldwide."
         }
       ]
     },
@@ -201,7 +201,7 @@
         {
           "kind": "field:description",
           "line": 118,
-          "value": "Focus entirely on performing sacred rites while Connect Hub Co. handles scheduling, logistics, and client support."
+          "value": "Focus entirely on performing sacred rites while Holy Yatra handles scheduling, logistics, and client support."
         },
         {
           "kind": "field:title",
@@ -1111,7 +1111,7 @@
         {
           "kind": "field:answer",
           "line": 415,
-          "value": "No. Connect Hub Co. does not promise guaranteed bookings, fixed income, commissions, or automatic customer assignments. Inquiries depend on customer demand and suitability."
+          "value": "No. Holy Yatra does not promise guaranteed bookings, fixed income, commissions, or automatic customer assignments. Inquiries depend on customer demand and suitability."
         },
         {
           "kind": "field:question",
@@ -1156,7 +1156,7 @@
         {
           "kind": "jsx-text",
           "line": 440,
-          "value": "CONNECT HUB CO."
+          "value": "HOLY YATRA"
         },
         {
           "kind": "jsx-text",
@@ -1206,7 +1206,7 @@
         {
           "kind": "jsx-text",
           "line": 471,
-          "value": "Verified Priests conduct authentic Vaidik rites for seeking families while Connect Hub Co. manages scheduling, client communication, travel logistics, and administrative support.\r\n              "
+          "value": "Verified Priests conduct authentic Vaidik rites for seeking families while Holy Yatra manages scheduling, client communication, travel logistics, and administrative support.\r\n              "
         },
         {
           "kind": "jsx-text",
@@ -1451,7 +1451,7 @@
         {
           "kind": "jsx-text",
           "line": 751,
-          "value": "Why Join Connect Hub Co.?"
+          "value": "Why Join Holy Yatra?"
         },
         {
           "kind": "jsx-text",

@@ -1,8 +1,8 @@
 [
   {
     "file": "apps/web/src/app/about/page.tsx",
-    "old": "Learn how Connect Hub Co. coordinates sacred services and pilgrim travel assistance in Gaya Ji and pan-India with verified Religious Partners.",
-    "new": "Learn how Connect Hub Co. coordinates sacred services and pilgrim travel assistance in Gaya Ji and pan-India with Verified Priests."
+    "old": "Learn how Holy Yatra coordinates sacred services and pilgrim travel assistance in Gaya Ji and pan-India with verified Religious Partners.",
+    "new": "Learn how Holy Yatra coordinates sacred services and pilgrim travel assistance in Gaya Ji and pan-India with Verified Priests."
   },
   {
     "file": "apps/web/src/app/bookings/page.tsx",
@@ -141,18 +141,18 @@
   },
   {
     "file": "apps/web/src/app/religious-partners/page.tsx",
-    "old": "Religious Partner Network | Connect Hub Co.",
-    "new": "Verified Priest Network | Connect Hub Co."
+    "old": "Religious Partner Network | Holy Yatra",
+    "new": "Verified Priest Network | Holy Yatra"
   },
   {
     "file": "apps/web/src/app/religious-partners/register/page.tsx",
-    "old": "Religious Partner Application | Connect Hub Co.",
-    "new": "Priest Application | Connect Hub Co."
+    "old": "Religious Partner Application | Holy Yatra",
+    "new": "Priest Application | Holy Yatra"
   },
   {
     "file": "apps/web/src/app/religious-partners/register/page.tsx",
-    "old": "Apply to register as a Religious Partner with Connect Hub Co.",
-    "new": "Apply to register as a Verified Priest with Connect Hub Co."
+    "old": "Apply to register as a Religious Partner with Holy Yatra",
+    "new": "Apply to register as a Verified Priest with Holy Yatra"
   },
   {
     "file": "apps/web/src/app/reports/page.tsx",
@@ -471,8 +471,8 @@
   },
   {
     "file": "apps/web/src/components/business-pages/religious-partners/ReligiousPartnersContent.tsx",
-    "old": "\r\n                Religious Partners conduct authentic Vaidik rites for seeking families while Connect Hub Co. manages scheduling, client communication, travel logistics, and administrative support.\r\n              ",
-    "new": "\r\n                Verified Priests conduct authentic Vaidik rites for seeking families while Connect Hub Co. manages scheduling, client communication, travel logistics, and administrative support.\r\n              "
+    "old": "\r\n                Religious Partners conduct authentic Vaidik rites for seeking families while Holy Yatra manages scheduling, client communication, travel logistics, and administrative support.\r\n              ",
+    "new": "\r\n                Verified Priests conduct authentic Vaidik rites for seeking families while Holy Yatra manages scheduling, client communication, travel logistics, and administrative support.\r\n              "
   },
   {
     "file": "apps/web/src/components/business-pages/religious-partners/ReligiousPartnersContent.tsx",
@@ -586,8 +586,8 @@
   },
   {
     "file": "apps/web/src/components/common/BusinessAbout.tsx",
-    "old": "Gaya is a deeply significant destination for ancestral rites. Connect Hub Co focuses on dependable local coordination while leaving ritual guidance and correctness with qualified religious partners.",
-    "new": "Gaya is a deeply significant destination for ancestral rites. Connect Hub Co focuses on dependable local coordination while leaving ritual guidance and correctness with qualified Verified Priests."
+    "old": "Gaya is a deeply significant destination for ancestral rites. Holy Yatra focuses on dependable local coordination while leaving ritual guidance and correctness with qualified religious partners.",
+    "new": "Gaya is a deeply significant destination for ancestral rites. Holy Yatra focuses on dependable local coordination while leaving ritual guidance and correctness with qualified Verified Priests."
   },
   {
     "file": "apps/web/src/components/common/BusinessDashboard.tsx",
@@ -821,8 +821,8 @@
   },
   {
     "file": "apps/web/src/features/ai/knowledge/semantic-search.ts",
-    "old": "Connect Hub Co. acts as an authorized coordination platform connecting families with verified Religious Partners, qualified priests, and travel support providers. Final ritual formats and traditions are confirmed with verified priests.",
-    "new": "Connect Hub Co. acts as an authorized coordination platform connecting families with Verified Priests, qualified priests, and travel support providers. Final ritual formats and traditions are confirmed with verified priests."
+    "old": "Holy Yatra acts as an authorized coordination platform connecting families with verified Religious Partners, qualified priests, and travel support providers. Final ritual formats and traditions are confirmed with verified priests.",
+    "new": "Holy Yatra acts as an authorized coordination platform connecting families with Verified Priests, qualified priests, and travel support providers. Final ritual formats and traditions are confirmed with verified priests."
   },
   {
     "file": "apps/web/src/features/ai/knowledge/semantic-search.ts",

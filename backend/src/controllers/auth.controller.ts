@@ -15,6 +15,7 @@ export async function registerUser(
       fullName,
       email,
       password,
+      mobile,
     } = req.body;
 
     if (!fullName || !email || !password) {
@@ -41,12 +42,18 @@ export async function registerUser(
     const hashedPassword =
       await bcrypt.hash(password, 10);
 
+    const mobileValue =
+      typeof mobile === "string" && mobile.trim() !== ""
+        ? mobile.trim()
+        : undefined;
+
     const user =
       await prisma.user.create({
         data: {
           fullName,
           email,
           password: hashedPassword,
+          ...(mobileValue !== undefined ? { mobile: mobileValue } : {}),
         },
       });
 
@@ -58,6 +65,7 @@ export async function registerUser(
         fullName: user.fullName,
         email: user.email,
         role: user.role,
+        mobile: user.mobile ?? null,
       },
     });
 
@@ -151,6 +159,7 @@ export async function loginUser(
         fullName: user.fullName,
         email: user.email,
         role: user.role,
+        mobile: user.mobile ?? null,
       },
     });
 
@@ -169,12 +178,27 @@ export async function loginUser(
 export async function getCurrentUser(req: AuthenticatedRequest, res: Response) {
   const user = await prisma.user.findUnique({
     where: { id: req.auth!.id },
-    select: { id: true, fullName: true, email: true, role: true, isActive: true },
+    select: {
+      id: true,
+      fullName: true,
+      email: true,
+      role: true,
+      isActive: true,
+      mobile: true,
+    },
   });
   if (!user?.isActive) {
     return res.status(401).json({ success: false, message: "Authentication session is no longer active." });
   }
-  return res.json({ user: { id: user.id, fullName: user.fullName, email: user.email, role: user.role } });
+  return res.json({
+    user: {
+      id: user.id,
+      fullName: user.fullName,
+      email: user.email,
+      role: user.role,
+      mobile: user.mobile ?? null,
+    },
+  });
 }
 
 export function logoutUser(_req: Request, res: Response) {
